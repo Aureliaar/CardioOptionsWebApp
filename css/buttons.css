@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 200;
+}
+h2{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2fcc71;
+    max-width: 40%;
+    margin: 20px auto;
+}
+
+/* CONTAINERS */
+
+.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.two { width: 49%; max-width: 49%;}
+.three { width: 32.26%; max-width: 32.26%;}
+.four { width: 23%; max-width: 24%;}
+.five { width: 18%; max-width: 20%;}
+
+
+
+/* COLUMNS */
+
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* radio-form */
+
+.radio-form .plan input, .radio-form .payment-plan input, .radio-form .payment-type input{
+    display: none;
+}
+h2.bold{
+    font-weight: 700;
+}
+
+
+.radio-form label{
+    position: relative;
+    color: #fff;
+    background-color: #aaa;
+    font-size: 26px;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.radio-form .plan input:checked + label, .radio-form .payment-plan input:checked + label, .radio-form .payment-type input:checked + label{
+    border: 3px solid #333;
+    background-color: #2fcc71;
+}
+
+.radio-form .plan input:checked + label:after, radio-form .payment-plan input:checked + label:after, .radio-form .payment-type input:checked + label:after{
+    content: "\2713";
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    border: 2px solid #333;
+    background-color: #2fcc71;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.submit{
+    padding: 15px 60px;
+    display: inline-block;
+    border: none;
+    margin: 20px 0;
+    background-color: #2fcc71;
+    color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    -webkit-transition: transradio-form 0.3s ease-in-out;
+    -o-transition: transradio-form 0.3s ease-in-out;
+    transition: transradio-form 0.3s ease-in-out;
+}
+
+.submit:hover{
+    cursor: pointer;
+    transradio-form: rotateX(360deg);
+}

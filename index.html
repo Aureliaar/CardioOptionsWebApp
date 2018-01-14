@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="scss/text.css">
+    <!-- Checkmark -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/checkmark.css"/>
+
+
+
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<div class="container">
+        <h1>Cardiac Check-in Form</h1>
+    <div class="group">
+        <input class="textl" type="text" id="name" value="Autocalc" disabled>
+        <label class="textl" for="name">Dark Side</label>
+        <div class="bar"></div>
+    </div>    <div class="group">
+    <input class="textl" type="text" id="name2" required="required"/>
+    <label class="textl" for="name2">Name</label>
+    <div class="bar"></div>
+</div>
+    <label class="label checkmark_label"> Critical preoperative state
+        <input  class="label__checkbox" type="checkbox" />
+        <span class="label__text">
+      <span class="label__check">
+        <i class="fa fa-check icon"></i>
+      </span>
+    </span>
+    </label>
+    <label class="label checkmark_label"> Critical preoperative state
+        <input  class="label__checkbox" type="checkbox" />
+        <span class="label__text">
+      <span class="label__check">
+        <i class="fa fa-check icon"></i>
+      </span>
+    </span>
+    </label>
+
+    <form class="radio-form cf">
+        <h2>sex</h2>
+
+        <section class="plan cf">
+            <input type="radio" name="radio2" id="Female" value="Female"><label class="Female-label two col" for="Female">Female</label>
+            <input type="radio" name="radio2" id="Male" value="Male"><label class="Male-label two col" for="Male">Male</label>
+        </section>
+        <section class="plan cf">
+            <h2>NYHA Class:</h2>
+            <input type="radio" name="radio1" id="I" value="I"><label class="four col" for="I">I</label>
+            <input type="radio" name="radio1" id="II" value="II"><label class="four col" for="II">II</label>
+            <input type="radio" name="radio1" id="III" value="III"><label class="four col" for="III">III</label>
+            <input type="radio" name="radio1" id="IV" value="IV"><label class="four col" for="IV">IV</label>
+        </section>
+        <section class="plan cf">
+            <h2>CCS Class:</h2>
+            <input type="radio" name="CCS-" id="CCS-0" value="CCS-0"><label class="five col" for="CCS-0">0</label>
+            <input type="radio" name="CCS-" id="CCS-I" value="CCS-I"><label class="five col" for="CCS-I">I</label>
+            <input type="radio" name="CCS-" id="CCS-II" value="CCS-II"><label class="five col" for="CCS-II">II</label>
+            <input type="radio" name="CCS-" id="CCS-III" value="CCS-III"><label class="five col" for="CCS-III">III</label>
+            <input type="radio" name="CCS-" id="CCS-IV" value="CCS-IV"><label class="five col" for="CCS-IV">IV</label>
+        </section>
+        </section>
+        <section id = "section-MI" class="plan cf">
+            <h2 class="bold">Myocardial Infarction (MI):</h2>
+            <input type="radio" name="MI" id="MINO" value="MINO"><label class="two col" for="MINO">NO</label>
+            <input type="radio" name="MI" id="MIYES" value="MIYES"><label class="two col" for="MIYES">YES</label>
+        </section>
+        <section id = "section-PCI" class="plan cf">
+            <h2>PCI:</h2>
+            <input type="radio" name="PCI" id="PCINO" value="PCINO"><label class="two col" for="PCINO">NO</label>
+            <input type="radio" name="PCI" id="PCIYES" value="PCIYES"><label class="two col" for="PCIYES">YES</label>
+        </section>
+        <section id = "section-CABG" class="plan cf">
+            <h2>CABG:</h2>
+            <input type="radio" name="CABG" id="CABGNO" value="CABGNO"><label class="two col" for="CABGNO">NO</label>
+            <input type="radio" name="CABG" id="CABGYES" value="CABGYES"><label class="two col" for="CABGYES">YES</label>
+        </section>
+        <section id = "section-CAD" class="plan cf">
+            <h2>CAD:</h2>
+            <input type="radio" name="CAD" id="CADNO" value="CADNO"><label class="two col" for="CADNO">NO</label>
+            <input type="radio" name="CAD" id="CADYES" value="CADYES"><label class="two col" for="CADYES">YES</label>
+        </section>
+        <section id = "section-HTN" class="plan cf">
+            <h2>HTN:</h2>
+            <input type="radio" name="HTN" id="HTNNO" value="HTNNO"><label class="two col" for="HTNNO">NO</label>
+            <input type="radio" name="HTN" id="HTNYES" value="HTNYES"><label class="two col" for="HTNYES">YES</label>
+        </section>
+        <section id = "section-DM" class="plan cf">
+            <h2>DM:</h2>
+            <input type="radio" name="DM" id="DMNO" value="DMNO"><label class="two col" for="DMNO">NO</label>
+            <input type="radio" name="DM" id="DMYES" value="DMYES"><label class="two col" for="DMYES">YES</label>
+        </section>
+        <section id = "section-DM-Insulin" class="plan cf">
+            <h2>DM-Insulin:</h2>
+            <input type="radio" name="DM-Insulin" id="DM-InsulinNO" value="DM-InsulinNO"><label class="two col" for="DM-InsulinNO">NO</label>
+            <input type="radio" name="DM-Insulin" id="DM-InsulinYES" value="DM-InsulinYES"><label class="two col" for="DM-InsulinYES">YES</label>
+        </section>
+        <section id = "section-PVD" class="plan cf">
+            <h2>PVD:</h2>
+            <input type="radio" name="PVD" id="PVDNO" value="PVDNO"><label class="two col" for="PVDNO">NO</label>
+            <input type="radio" name="PVD" id="PVDYES" value="PVDYES"><label class="two col" for="PVDYES">YES</label>
+        </section>
+        <section id = "section-COPD" class="plan cf">
+            <h2>COPD:</h2>
+            <input type="radio" name="COPD" id="COPDNO" value="COPDNO"><label class="two col" for="COPDNO">NO</label>
+            <input type="radio" name="COPD" id="COPDYES" value="COPDYES"><label class="two col" for="COPDYES">YES</label>
+        </section>
+        <section id = "section-CVD" class="plan cf">
+            <h2>CVD:</h2>
+            <input type="radio" name="CVD" id="CVDNO" value="CVDNO"><label class="two col" for="CVDNO">NO</label>
+            <input type="radio" name="CVD" id="CVDYES" value="CVDYES"><label class="two col" for="CVDYES">YES</label>
+        </section>
+        <section id = "section-Current-Smoke" class="plan cf">
+            <h2>Current-Smoke:</h2>
+            <input type="radio" name="Current-Smoke" id="Current-SmokeNO" value="Current-SmokeNO"><label class="two col" for="Current-SmokeNO">NO</label>
+            <input type="radio" name="Current-Smoke" id="Current-SmokeYES" value="Current-SmokeYES"><label class="two col" for="Current-SmokeYES">YES</label>
+        </section>
+        <section id = "section-Previous-Smoke" class="plan cf">
+            <h2>Previous-Smoke:</h2>
+            <input type="radio" name="Previous-Smoke" id="Previous-SmokeNO" value="Previous-SmokeNO"><label class="two col" for="Previous-SmokeNO">NO</label>
+            <input type="radio" name="Previous-Smoke" id="Previous-SmokeYES" value="Previous-SmokeYES"><label class="two col" for="Previous-SmokeYES">YES</label>
+        </section>
+        <section id = "section-AF" class="plan cf">
+            <h2>AF:</h2>
+            <input type="radio" name="AF" id="AFNO" value="AFNO"><label class="two col" for="AFNO">NO</label>
+            <input type="radio" name="AF" id="AFYES" value="AFYES"><label class="two col" for="AFYES">YES</label>
+        </section>
+        <section id = "section-PMK" class="plan cf">
+            <h2>PMK:</h2>
+            <input type="radio" name="PMK" id="PMKNO" value="PMKNO"><label class="two col" for="PMKNO">NO</label>
+            <input type="radio" name="PMK" id="PMKYES" value="PMKYES"><label class="two col" for="PMKYES">YES</label>
+        </section>
+        <section id = "section-Dyslipidemia" class="plan cf">
+            <h2>Dyslipidemia:</h2>
+            <input type="radio" name="Dyslipidemia" id="DyslipidemiaNO" value="DyslipidemiaNO"><label class="two col" for="DyslipidemiaNO">NO</label>
+            <input type="radio" name="Dyslipidemia" id="DyslipidemiaYES" value="DyslipidemiaYES"><label class="two col" for="DyslipidemiaYES">YES</label>
+        </section>
+        <section id = "section-Pulmonary-HTN" class="plan cf">
+            <h2>Pulmonary-HTN:</h2>
+            <input type="radio" name="Pulmonary-HTN" id="Pulmonary-HTNNO" value="Pulmonary-HTNNO"><label class="two col" for="Pulmonary-HTNNO">NO</label>
+            <input type="radio" name="Pulmonary-HTN" id="Pulmonary-HTNYES" value="Pulmonary-HTNYES"><label class="two col" for="Pulmonary-HTNYES">YES</label>
+        </section>
+        <section id = "section-Pulmonary-HTN-Mod-Sev" class="plan cf">
+            <h2>Pulmonary-HTN-Mod-Sev:</h2>
+            <input type="radio" name="Pulmonary-HTN-Mod-Sev" id="Pulmonary-HTN-Mod-SevNO" value="Pulmonary-HTN-Mod-SevNO"><label class="two col" for="Pulmonary-HTN-Mod-SevNO">NO</label>
+            <input type="radio" name="Pulmonary-HTN-Mod-Sev" id="Pulmonary-HTN-Mod-SevYES" value="Pulmonary-HTN-Mod-SevYES"><label class="two col" for="Pulmonary-HTN-Mod-SevYES">YES</label>
+        </section>
+        <section id = "section-CKD" class="plan cf">
+            <h2>CKD:</h2>
+            <input type="radio" name="CKD" id="CKDNO" value="CKDNO"><label class="two col" for="CKDNO">NO</label>
+            <input type="radio" name="CKD" id="CKDYES" value="CKDYES"><label class="two col" for="CKDYES">YES</label>
+        </section>
+        <section id = "section-Dyalisis" class="plan cf">
+            <h2>Dyalisis:</h2>
+            <input type="radio" name="Dyalisis" id="DyalisisNO" value="DyalisisNO"><label class="two col" for="DyalisisNO">NO</label>
+            <input type="radio" name="Dyalisis" id="DyalisisYES" value="DyalisisYES"><label class="two col" for="DyalisisYES">YES</label>
+        </section>
+        <section id = "section-Syncope" class="plan cf">
+            <h2>Syncope:</h2>
+            <input type="radio" name="Syncope" id="SyncopeNO" value="SyncopeNO"><label class="two col" for="SyncopeNO">NO</label>
+            <input type="radio" name="Syncope" id="SyncopeYES" value="SyncopeYES"><label class="two col" for="SyncopeYES">YES</label>
+        </section>
+        <section id = "section-Death" class="plan cf">
+            <h2>Death:</h2>
+            <input type="radio" name="Death" id="DeathNO" value="DeathNO"><label class="two col" for="DeathNO">NO</label>
+            <input type="radio" name="Death" id="DeathYES" value="DeathYES"><label class="two col" for="DeathYES">YES</label>
+            <input class="submit" type="submit" value="Submit">
+    </form>
+</div>
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>

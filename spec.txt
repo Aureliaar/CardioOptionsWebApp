@@ -1,0 +1,102 @@
+H Patient related factors
+T Last Name 
+T First Name 
+T Date of birth 
+A Age
+M Sex, Male, Female
+T Weight 
+T Height 
+A Body Mass Index
+C Current Smoke
+C Previous Smoke 
+C Actually Alcohol or Drug Usage
+C Prior Alcohol or Drug Usage History 
+C Death
+T Cause of Death 
+C Chronic pulmunary disease 
+C Abnormal liver funciotn 
+H Blood Analysis
+T Dyslipidemia, mg/dL
+C labile INRs  
+C Diabetes Mellitus 
+C DM Insulin dependent 
+H Renal Function
+T Creatinine, mg/dL
+C Creatinine>2.26 mg/dL (200 µmol/L) 
+T Serum creatinine 
+T Creatinine cleareance, ml/min 
+M Renal impairment, normal
+C Dyalisis 
+A eGFR Cockcroft Gault
+T Baseline Creatinine
+T Peak Creatinine 
+T Discharge Creatinine 
+C Chronic Kidney Disease
+C Abnormal renal function
+H Neurological factors
+C Neurological dysfunction disease 
+C Syncope 
+C Poor mobility 
+C Transient Ischemic Attack
+H Surgical related factors
+T Type of Operation 
+T Operation data 
+M Urgency, elective, urgent, emergency, salvage
+C Bleeding 
+C Critical preoperative state 
+M Weight of the intervention, isolated CABG, single non CABG, 2 procedures, 3 procedures
+H Cardiac related factors
+C Myocardial Infarction 
+T Date of event 
+C Recent MI (se date of event è minore di 90 giorni)
+C Post Infarct Septal Rupture 
+C Heart Failure 
+M NYHA Class, I, II, III, IV
+C Angina pectoris
+M CCS Class, 0, I, II, III, IV
+C Unstable Angina 
+C Atrial fibrillation 
+C Coronary Artery Disease 
+T EF (%), %
+C LV Dysfunction
+M Pre-AR Grade, 0, slight, moderate, severe
+T EROA, cm2
+M Pre-MR Grade, 0, slight, moderate, severe
+T Vena Contracta
+M Pre-AS Grade, 0, slight, moderate, severe
+T AVA, cm2
+T Mean Gradient, mmHg
+T Jet velocity, m/s
+M Pre-MS Grade, 0, slight, moderate, severe
+T Valve area, cm2
+T Mean Gradient, mmHg
+T PAPs, mmHg 
+T Last Follow Up 
+H Previous Cardiac Surgery
+C Previous cardiac surgery 
+C Previous PCI 
+C Previous CABG 
+C Previous PMK 
+C Extracardiac arteriopathy 
+C Surgery on thoracic aorta 
+C Active endocarditis 
+H Vascular disease	
+C Arterial Hypertension
+C Periferal Vascular Disease 
+C Chronic Obstructive Pulmonary Disease
+C Cardio Vascular disease 
+T PAPs, mmHg
+C Pulmonary Hypertension
+M Pulmonary Hypertension grade, moderate, severe
+H Score
+A EUROSCORE
+A EUROSCORE II
+A Log-EUROSCORE
+A CHA2DS2-VASc - Score
+A HAS-BLED- score
+
+
+
+
+
+

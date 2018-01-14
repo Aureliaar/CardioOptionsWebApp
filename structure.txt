@@ -1,0 +1,66 @@
+• Last Name CASELLA DI TESTO
+• First Name​CASELLA DI TESTO
+• Procedure Date (or procedures date) CASELLA DI TESTO
+• Age​CASELLA DI TESTO
+• Sex​LEVETTA male-female
+• Height CASELLA DI TESTO
+• Weight​CASELLA DI TESTO
+• BMI CALCOLO AUTOMATICO
+• SERUM CREATININE CASELLA DI TESTO
+• MI​(myocardial infarction) LEVETTA SI-NO
+• Previous PCI (percutaneous coronary angioplasty) LEVETTA SI-NO
+• Previous CABG (coronary artery bypass graft) LEVETTA SI-NO
+• CAD (coronary artery disease) LEVETTA SI-NO
+• Arterial HTN (Hypertension) LEVETTA SI-NO
+• DM​ (Diabetes mellitus) LEVETTA SI-NO
+• DM Insulin dependent LEVETTA SI-NO
+• NYHA Class​QUATTRO PULSANTI SELEZIONABILI (I-II-III-IV)
+• CCS Class CINQUE PULSANTI SELEZIONABILI (0-I-II-III-IV)
+• PVD (Periferal Vascular Disease) LEVETTA SI-NO
+• COPD (Chronic Obstructive Pulmonary Disease)​LEVETTA SI-NO
+• CVD (Cardio Vascular disease) LEVETTA SI-NO
+• Current Smoke LEVETTA SI-NO
+• Previous Smoke LEVETTA SI-NO
+• AF  (Atrial fibrillation) LEVETTA SI-NO​
+• Previous PMK LEVETTA SI-NO
+• Dyslipidemia LEVETTA SI-NO
+• EF (%) (ejection fraction) CASELLA DI TESTO %
+• Pulmonary HTN LEVETTA SI-NO
+• Pulmonary HTN Mod-Sev​ LEVETTA SI-NO
+• PAPs CASELLA DI TESTO
+• CKD (Chronic Kidmey Disease) LEVETTA SI-NO
+• Dyalisis​LEVETTA SI-NO
+• Baseline Creatinine CASELLA DI TESTO
+• Peak Creatinine CASELLA DI TESTO
+• Discharge Creatinine CASELLA DI TESTO
+• Angina​CASELLA DI TESTO
+• Syncope​ LEVETTA SI-NO
+• Euroscore​CASELLA DI TESTO
+• Log-Euroscore​CASELLA DI TESTO
+• STS Score​CASELLA DI TESTO
+• SINTAX score CASELLA DI TESTO
+• CHA2DS2-VASc-Score CASELLA DI TESTO
+• HAS-BLED score CASELLA DI TESTO
+• Pre-AR Grade (Aortic Regurgitation) 4 PULSANTI SELEZIONABILI (0 - LIEVE - MODERATA - GRAVE)  SECONDA  CASELLA CON CASELLA DI TESTO PER "EROA (cm2)"
+• Pre-MR Grade (Mitral Regurgitation) 4 PULSANTI SELEZIONABILI (0 - LIEVE - MODERATA - GRAVE) - SECONDA CASELLA CON CASELLA DI TESTO PER "VENA CONTRACTA"
+• Pre-AS Grade (Aortic stenosis) 4 PULSANTI SELEZIONABILI (0 - LIEVE - MODERATA - GRAVE) SECONDA, TERZA e QUARTA CASELLA CON CASELLA DI TESTO PER "AVA (cm2)",  "mean GRADIENT mmhg" e " jet velocity m/s".
+• Pre-MS (mitral stenosis) Grade 4 PULSANTI SELEZIONABILI (0 - LIEVE - MODERATA - GRAVE) - SECONDA, TERZA e QUARTA CASELLA CON CASELLA DI TESTO PER "Valve area (cm2)", "mean GRADIENT mmhg" e "PAPs"
+• eGFR Cockcroft Gault  CALCOLO AUTOMATICO
+• Euroscorecalcolo automatico
+• Log-Euroscorecalcolo automatico
+• STS Scorecalcolo automatico
+• SINTAX score calcolo automatico
+• CHA2DS2-VASc-Score - calcolo automatico
+• HAS-BLED score - calcolo automatico
+• Last FU (Follow Up) CASELLA DI TESTO
+• Death LEVETTA SI-NO
+• Cause of Death​ CASELLA DI TESTO
+
+2-choices:
+idpreflst = ["MI", "PCI", "CABG", "CAD", "HTN", "DM", "DM-Insulin", "PVD", "COPD", "CVD", "Current-Smoke", "Previous-Smoke", "AF", "PMK", "Dyslipidemia", "Pulmonary-HTN", "Pulmonary-HTN-Mod-Sev", "CKD", "Dyalisis", "Syncope", "Death" ]
+
+Categories:
+- Text fields
+    - Binary choices (checkboxes - https://codepen.io/daniandl/pen/OgbXzK )
+- 3+ choices (already loaded)
+
