@@ -22,10 +22,10 @@ C Diabetes Mellitus
 C DM Insulin dependent 
 H Renal Function
 T Creatinine, mg/dL
-C Creatinine>2.26 mg/dL (200 µmol/L) 
+C Creatinine&gt2.26 mg/dL (200 µmol/L) 
 T Serum creatinine 
 T Creatinine cleareance, ml/min 
-M Renal impairment, normal
+M Renal impairment, normal, moderate, severe
 C Dyalisis 
 A eGFR Cockcroft Gault
 T Baseline Creatinine
@@ -69,8 +69,6 @@ T Mean Gradient, mmHg
 T Jet velocity, m/s
 M Pre-MS Grade, 0, slight, moderate, severe
 T Valve area, cm2
-T Mean Gradient, mmHg
-T PAPs, mmHg 
 T Last Follow Up 
 H Previous Cardiac Surgery
 C Previous cardiac surgery 
