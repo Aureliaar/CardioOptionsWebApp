@@ -1,9 +1,9 @@
 
 def sanitize(text):
-	return text.replace(" ", "_")
+	return text.replace(" ", "_").lower()
 
 def sreplace(string, name, prefix=""):
-	if prefix=="": prefix = sanitize(name)+"-"
+	if prefix=="": prefix = sanitize(name)
 	string = string.replace("{id-prefix}", prefix)
 	string = string.replace("{name}", name)
 	return string
@@ -21,14 +21,14 @@ def M(Name, Options):
 	string = """		<input type="radio" name="{id-prefix}" id="{id-prefix}{name}" value="{id-prefix}{name}"><label class="{num} col" for="{id-prefix}{name}">{name}</label>"""
 	headerstring = """<form class="radio-form cf">
 <section id = "section-{id-prefix}" class="plan cf">
-	<h2>{id-prefix}:</h2>"""
+	<h2>{id-prefix}</h2>"""
 	enderstring ="""
 </section></form>"""
 
 	numdict= {2:"two", 3:"three", 4:"four", 5:"five"}
 	num = len(Options)
 	prefix = sanitize(Name)
-	print headerstring.replace("{id-prefix}", prefix)
+	print headerstring.replace("{id-prefix}", Name)
 	numberedString = string.replace("{num}", numdict[num])
 
 	for item in Options:
@@ -66,6 +66,7 @@ with open("spec.txt") as fin:
 		if line=="": break
 		#if len(line) < 2: continue
 		#preprocessing
+		line = line.rstrip()
 		code = line[:1]
 		stuff = line[2:].split(", ", 1)
 		text = stuff[0]

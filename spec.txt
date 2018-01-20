@@ -1,97 +1,97 @@
-H Patient related factors
+H Patient Related Factors
 T Last Name 
 T First Name 
-T Date of birth 
+T Date of Birth 
 A Age
 M Sex, Male, Female
-T Weight 
-T Height 
+T Weight (kg)
+T Height (cm)
 A Body Mass Index
 C Current Smoke
 C Previous Smoke 
-C Actually Alcohol or Drug Usage
-C Prior Alcohol or Drug Usage History 
+C Alcohol Usage History
+C Drug Usage History
 C Death
 T Cause of Death 
-C Chronic pulmunary disease 
-C Abnormal liver funciotn 
+C Chronic Pulmunary Disease 
+C Abnormal Liver Funciotn 
 H Blood Analysis
-T Dyslipidemia, mg/dL
-C labile INRs  
+T Dyslipidemia, Mg/dl
+C Labile Inrs  
 C Diabetes Mellitus 
-C DM Insulin dependent 
+C Dm Insulin Dependent 
 H Renal Function
-T Creatinine, mg/dL
-C Creatinine&gt2.26 mg/dL (200 µmol/L) 
-T Serum creatinine 
-T Creatinine cleareance, ml/min 
-M Renal impairment, normal, moderate, severe
+T Creatinine, Mg/dl
+C Creatinine&gt2.26 Mg/dl (200 Μmol/l) 
+T Serum Creatinine 
+T Creatinine Cleareance, Ml/min 
+M Renal Impairment, Normal, Moderate, Severe
 C Dyalisis 
-A eGFR Cockcroft Gault
+A Egfr Cockcroft Gault
 T Baseline Creatinine
 T Peak Creatinine 
 T Discharge Creatinine 
 C Chronic Kidney Disease
-C Abnormal renal function
-H Neurological factors
-C Neurological dysfunction disease 
+C Abnormal Renal Function
+H Neurological Factors
+C Neurological Dysfunction Disease 
 C Syncope 
-C Poor mobility 
+C Poor Mobility 
 C Transient Ischemic Attack
-H Surgical related factors
+H Surgical Related Factors
 T Type of Operation 
-T Operation data 
-M Urgency, elective, urgent, emergency, salvage
+T Operation Data 
+M Urgency, Elective, Urgent, Emergency, Salvage
 C Bleeding 
-C Critical preoperative state 
-M Weight of the intervention, isolated CABG, single non CABG, 2 procedures, 3 procedures
-H Cardiac related factors
+C Critical Preoperative State 
+M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures
+H Cardiac Related Factors
 C Myocardial Infarction 
-T Date of event 
-C Recent MI (se date of event è minore di 90 giorni)
+T Date of Event 
+C Recent Mi 
 C Post Infarct Septal Rupture 
 C Heart Failure 
-M NYHA Class, I, II, III, IV
-C Angina pectoris
-M CCS Class, 0, I, II, III, IV
+M Nyha Class, I, Ii, Iii, Iv
+C Angina Pectoris
+M Ccs Class, 0, I, Ii, Iii, Iv
 C Unstable Angina 
-C Atrial fibrillation 
+C Atrial Fibrillation 
 C Coronary Artery Disease 
-T EF (%), %
-C LV Dysfunction
-M Pre-AR Grade, 0, slight, moderate, severe
-T EROA, cm2
-M Pre-MR Grade, 0, slight, moderate, severe
+T Ef (%), %
+C Lv Dysfunction
+M Pre-ar Grade, 0, Slight, Moderate, Severe
+T Eroa, Cm2
+M Pre-mr Grade, 0, Slight, Moderate, Severe
 T Vena Contracta
-M Pre-AS Grade, 0, slight, moderate, severe
-T AVA, cm2
-T Mean Gradient, mmHg
-T Jet velocity, m/s
-M Pre-MS Grade, 0, slight, moderate, severe
-T Valve area, cm2
+M Pre-as Grade, 0, Slight, Moderate, Severe
+T Ava, Cm2
+T Mean Gradient, Mmhg
+T Jet Velocity, M/s
+M Pre-ms Grade, 0, Slight, Moderate, Severe
+T Valve Area, Cm2
 T Last Follow Up 
 H Previous Cardiac Surgery
-C Previous cardiac surgery 
-C Previous PCI 
-C Previous CABG 
-C Previous PMK 
-C Extracardiac arteriopathy 
-C Surgery on thoracic aorta 
-C Active endocarditis 
-H Vascular disease	
+C Previous Cardiac Surgery 
+C Previous Pci 
+C Previous Cabg 
+C Previous Pmk 
+C Extracardiac Arteriopathy 
+C Surgery On Thoracic Aorta 
+C Active Endocarditis 
+H Vascular Disease	
 C Arterial Hypertension
-C Periferal Vascular Disease 
+C Peripheral Vascular Disease 
 C Chronic Obstructive Pulmonary Disease
-C Cardio Vascular disease 
-T PAPs, mmHg
+C Cardio Vascular Disease 
+T Paps, Mmhg
 C Pulmonary Hypertension
-M Pulmonary Hypertension grade, moderate, severe
+M Pulmonary Hypertension Grade, Moderate, Severe
 H Score
-A EUROSCORE
-A EUROSCORE II
-A Log-EUROSCORE
-A CHA2DS2-VASc - Score
-A HAS-BLED- score
+A Euroscore
+A Euroscore Ii
+A Log-euroscore
+A Cha2ds2-vasc - Score
+A Has-bled- Score
 
 
 
