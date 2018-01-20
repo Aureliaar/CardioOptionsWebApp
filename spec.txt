@@ -1,9 +1,9 @@
 H Patient Related Factors
 T Last Name 
 T First Name 
-T Date of Birth 
-A Age
-M Sex, Male, Female
+D Date of Birth | Euroscore=0,
+A Age | Euroscore=1
+M Sex, Male, Female | Euroscore=1
 T Weight (kg)
 T Height (cm)
 A Body Mass Index
@@ -13,8 +13,8 @@ C Alcohol Usage History
 C Drug Usage History
 C Death
 T Cause of Death 
-C Chronic Pulmunary Disease 
-C Abnormal Liver Funciotn 
+C Chronic Pulmonary Disease | Euroscore=1, Log-Euroscore=0.4931341
+C Abnormal Liver Function
 H Blood Analysis
 T Dyslipidemia, Mg/dl
 C Labile Inrs  
@@ -23,7 +23,7 @@ C Dm Insulin Dependent
 H Renal Function
 T Creatinine, Mg/dl
 C Creatinine&gt2.26 Mg/dl (200 Μmol/l) 
-T Serum Creatinine 
+T Serum Creatinine | Euroscore=2
 T Creatinine Cleareance, Ml/min 
 M Renal Impairment, Normal, Moderate, Severe
 C Dyalisis 
@@ -34,31 +34,31 @@ T Discharge Creatinine
 C Chronic Kidney Disease
 C Abnormal Renal Function
 H Neurological Factors
-C Neurological Dysfunction Disease 
+C Neurological Dysfunction Disease | Euroscore=2
 C Syncope 
 C Poor Mobility 
 C Transient Ischemic Attack
 H Surgical Related Factors
 T Type of Operation 
-T Operation Data 
-M Urgency, Elective, Urgent, Emergency, Salvage
+D Operation Date
+M Urgency, Elective, Urgent, Emergency, Salvage | Euroscore=2
 C Bleeding 
-C Critical Preoperative State 
-M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures
+C Critical Preoperative State | Euroscore=3
+M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures | Euroscore=2
 H Cardiac Related Factors
 C Myocardial Infarction 
-T Date of Event 
-C Recent Mi 
-C Post Infarct Septal Rupture 
+D Date of Event 
+C Recent MI | Euroscore=2
+C Post Infarct Septal Rupture | Euroscore=4
 C Heart Failure 
-M Nyha Class, I, Ii, Iii, Iv
+M NYHA Class, I, II, III, IV
 C Angina Pectoris
-M Ccs Class, 0, I, Ii, Iii, Iv
-C Unstable Angina 
+M CCS Class, 0, I, II, III, IV
+C Unstable Angina | Euroscore=2
 C Atrial Fibrillation 
 C Coronary Artery Disease 
 T Ef (%), %
-C Lv Dysfunction
+C Lv Dysfunction | Euroscore=1
 M Pre-ar Grade, 0, Slight, Moderate, Severe
 T Eroa, Cm2
 M Pre-mr Grade, 0, Slight, Moderate, Severe
@@ -71,30 +71,24 @@ M Pre-ms Grade, 0, Slight, Moderate, Severe
 T Valve Area, Cm2
 T Last Follow Up 
 H Previous Cardiac Surgery
-C Previous Cardiac Surgery 
+C Previous Cardiac Surgery | Euroscore=3
 C Previous Pci 
 C Previous Cabg 
 C Previous Pmk 
-C Extracardiac Arteriopathy 
-C Surgery On Thoracic Aorta 
-C Active Endocarditis 
+C Extracardiac Arteriopathy | Euroscore=2
+C Surgery On Thoracic Aorta | Euroscore=3
+C Active Endocarditis | Euroscore=3
 H Vascular Disease	
 C Arterial Hypertension
 C Peripheral Vascular Disease 
 C Chronic Obstructive Pulmonary Disease
 C Cardio Vascular Disease 
 T Paps, Mmhg
-C Pulmonary Hypertension
+C Pulmonary Hypertension | Euroscore=2
 M Pulmonary Hypertension Grade, Moderate, Severe
 H Score
 A Euroscore
-A Euroscore Ii
-A Log-euroscore
-A Cha2ds2-vasc - Score
-A Has-bled- Score
-
-
-
-
-
-
+A Euroscore II
+A Log-Euroscore
+A CHA2DS2-vasc Score
+A HAS-BLED Score
