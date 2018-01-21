@@ -7,6 +7,9 @@ $('#date_of_birth').on('input', function() {
     $('#age').val(age);
     $('#age').trigger('input');
 });
+$('#age').on('input', function()   {
+    //TODO recent MI
+});
 $('#height, #weight').on('input', function(){
     var height = parseFloat($('#height').val())/100;
     var weight = parseFloat($('#weight').val());

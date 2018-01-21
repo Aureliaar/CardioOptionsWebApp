@@ -21,13 +21,12 @@ def sreplace(string, name, prefix="", autocalcData=""):
 	string = autocalcReplace(string, autocalcData)
 	return string
 
-def T(name, autocalc, etype="text"):
+def T(name, autocalc,):
 	string = """<div class="group">
-		<input class="textl" type="{type}" id="{id-prefix}" required="required"/>
+		<input class="textl" type="text" id="{id-prefix}" required="required"/>
 		<label class="textl" for="{id-prefix}">{name}</label>
 		<div class="bar"></div>
 	</div>"""
-	string = string.replace("{type}", etype)
 	print sreplace(string, name, autocalcData=autocalc)
 
 def M(Name, Options, autocalc):
@@ -72,7 +71,12 @@ def H(name):
 	print """<h1>{name}</h1>
 	""".replace("{name}", name)
 def D(name, autocalc=""):
-	T(name, autocalc, "date")
+	string = """<div class="group">
+		<input class="textl" type="date" id="{id-prefix}" required="required"/>
+		<label class="textl" for="{id-prefix}">{name}</label>
+		<div class="bar"></div>
+	</div>"""
+	print sreplace(string, name, autocalcData=autocalc)
 
 with open("spec.txt") as fin:
 	while True:

@@ -47,34 +47,41 @@ input.textl {
     background: $main-color;
     font-size: $width/15;
     transition: .3s ease;
+
     &:valid {
         // border-bottom-color: rgba(white, .5);
-        ~label {
+        ~ label {
             top: 0;
             font: 700 $width/25 Roboto;
             color: rgba(black, .6);
         }
     }
-    &:disabled{
+
+    &:disabled {
         color: rgba(black, .6);;
-        ~label {
+        ~ label {
             top: 0;
             font: 700 $width/25 Roboto;
             color: rgba(black, .5);
         }
-        ~bar {
+        ~ bar {
             background-color: blue;
         }
     }
-    &:focus{
+    &[type=date] {
+        ~ label {
+            top: 0;
+            font: 700 $width/25 Roboto;
+        }
+    }
+    &:focus {
         outline: none;
         // border-bottom-color: $secondary-color;
-        ~label {
+        ~ label {
             top: 0;
             font: 700 $width/25 Roboto;
             color: $secondary-color;
         }
-
 
         ~ .bar:before {
             transform: translateX(0);
