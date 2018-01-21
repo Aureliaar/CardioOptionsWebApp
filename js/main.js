@@ -58,3 +58,12 @@ $('.cha2ds2').on('input', function(){
 
     $('#cha2ds2-vasc_score').val(score);
 });
+$('#date_of_event').on('input', function(){
+
+    var datestr = $('#date_of_event').val();
+    var dob = +new Date(datestr);
+    var dayssince = (Date.now() - dob)/ (1000*60*60*24);
+    $('#recent_mi').prop("checked", dayssince<90);
+    $('#recent_mi').prop("disabled", true);
+    $("#recent_mi").trigger();
+});

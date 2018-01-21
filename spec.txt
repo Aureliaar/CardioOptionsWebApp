@@ -48,7 +48,7 @@ M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Pr
 H Cardiac Related Factors
 C Myocardial Infarction 
 D Date of Event 
-C Recent MI | Euroscore=2
+C Recent MI, disabled | Euroscore=2
 C Post Infarct Septal Rupture | Euroscore=4
 C Heart Failure | CHA2DS2=1
 M NYHA Class, I, II, III, IV
