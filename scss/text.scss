@@ -69,9 +69,11 @@ input.textl {
         }
     }
     &[type=date] {
+        color: rgba(black, .6);;
         ~ label {
             top: 0;
             font: 700 $width/25 Roboto;
+            color: rgba(black, .5);
         }
     }
     &:focus {

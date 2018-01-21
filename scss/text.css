@@ -51,9 +51,12 @@ input.textl {
       color: rgba(0, 0, 0, 0.5); }
     input.textl:disabled ~ bar {
       background-color: blue; }
-  input.textl[type=date] ~ label {
-    top: 0;
-    font: 700 22px Roboto; }
+  input.textl[type=date] {
+    color: rgba(0, 0, 0, 0.6); }
+    input.textl[type=date] ~ label {
+      top: 0;
+      font: 700 22px Roboto;
+      color: rgba(0, 0, 0, 0.5); }
   input.textl:focus {
     outline: none; }
     input.textl:focus ~ label {

@@ -1,9 +1,9 @@
 H Patient Related Factors
 T Last Name 
 T First Name 
-D Date of Birth | Euroscore=0,
+D Date of Birth | Euroscore=0, CHA2DS2VASC=0
 A Age | Euroscore=1
-M Sex, Male, Female | Euroscore=1
+M Sex, Male, Female | Euroscore=1, CHA2DS2=1
 T Weight (kg)
 T Height (cm)
 A Body Mass Index
@@ -18,7 +18,7 @@ C Abnormal Liver Function
 H Blood Analysis
 T Dyslipidemia, Mg/dl
 C Labile Inrs  
-C Diabetes Mellitus 
+C Diabetes Mellitus | CHA2DS2=1
 C Dm Insulin Dependent 
 H Renal Function
 T Creatinine, Mg/dl
@@ -37,7 +37,7 @@ H Neurological Factors
 C Neurological Dysfunction Disease | Euroscore=2
 C Syncope 
 C Poor Mobility 
-C Transient Ischemic Attack
+C Transient Ischemic Attack | CHA2DS2=2
 H Surgical Related Factors
 T Type of Operation 
 D Operation Date
@@ -50,7 +50,7 @@ C Myocardial Infarction
 D Date of Event 
 C Recent MI | Euroscore=2
 C Post Infarct Septal Rupture | Euroscore=4
-C Heart Failure 
+C Heart Failure | CHA2DS2=1
 M NYHA Class, I, II, III, IV
 C Angina Pectoris
 M CCS Class, 0, I, II, III, IV
@@ -80,7 +80,7 @@ C Surgery On Thoracic Aorta | Euroscore=3
 C Active Endocarditis | Euroscore=3
 H Vascular Disease	
 C Arterial Hypertension
-C Peripheral Vascular Disease 
+C Peripheral Vascular Disease | CHA2DS2=1
 C Chronic Obstructive Pulmonary Disease
 C Cardio Vascular Disease 
 T Paps, Mmhg

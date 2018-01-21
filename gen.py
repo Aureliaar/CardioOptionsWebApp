@@ -1,5 +1,7 @@
 
 def sanitize(text):
+	text = text.partition("(")[0]
+	text = text.rstrip()
 	return text.replace(" ", "_").lower()
 def autocalcReplace(string, autocalcData):
 	name = ""

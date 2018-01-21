@@ -43,7 +43,7 @@
         <div class="bar"></div>
     </div>
     <div class="group">
-        <input class="textl" type="date" id="date_of_birth" required="required" />
+        <input class="textl" type="date" id="date_of_birth" required="required"/>
         <label class="textl" for="date_of_birth">Date of Birth</label>
         <div class="bar"></div>
     </div>
@@ -55,18 +55,18 @@
     <form class="radio-form cf">
         <section id = "section-Sex" class="plan cf">
             <h2>Sex</h2>
-            <input class="MyRadioInput euroscore" type="radio" name="sex" id="sexmale" value="sexmale"><label class="two col" for="sexmale">Male</label>
-            <input class="MyRadioInput euroscore" type="radio" name="sex" id="sexfemale" value="sexfemale"><label class="two col" for="sexfemale">Female</label>
+            <input class="MyRadioInput euroscore cha2ds2" type="radio" name="sex" id="sexmale" value="sexmale"><label class="two col" for="sexmale">Male</label>
+            <input class="MyRadioInput euroscore cha2ds2" type="radio" name="sex" id="sexfemale" value="sexfemale"><label class="two col" for="sexfemale">Female</label>
 
         </section></form>
     <div class="group">
-        <input class="textl" type="text" id="weight_(kg)" required="required"/>
-        <label class="textl" for="weight_(kg)">Weight (kg)</label>
+        <input class="textl" type="text" id="weight" required="required"/>
+        <label class="textl" for="weight">Weight (kg)</label>
         <div class="bar"></div>
     </div>
     <div class="group">
-        <input class="textl" type="text" id="height_(cm)" required="required"/>
-        <label class="textl" for="height_(cm)">Height (cm)</label>
+        <input class="textl" type="text" id="height" required="required"/>
+        <label class="textl" for="height">Height (cm)</label>
         <div class="bar"></div>
     </div>
     <div class="group">
@@ -151,7 +151,7 @@
 	</span>
     </label>
     <label class="label checkmark_label"> Diabetes Mellitus
-        <input  id=diabetes_mellitus class="label__checkbox " type="checkbox"  />
+        <input  id=diabetes_mellitus class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
         <span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -174,7 +174,7 @@
         <div class="bar"></div>
     </div>
     <label class="label checkmark_label"> Creatinine&gt2.26 Mg/dl (200 Μmol/l)
-        <input  id=creatinine&gt2.26_mg/dl_(200_Μmol/l) class="label__checkbox " type="checkbox"  />
+        <input  id=creatinine&gt2.26_mg/dl class="label__checkbox " type="checkbox"  />
         <span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -270,7 +270,7 @@
 	</span>
     </label>
     <label class="label checkmark_label"> Transient Ischemic Attack
-        <input  id=transient_ischemic_attack class="label__checkbox " type="checkbox"  />
+        <input  id=transient_ischemic_attack class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="2"  />
         <span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -355,7 +355,7 @@
 	</span>
     </label>
     <label class="label checkmark_label"> Heart Failure
-        <input  id=heart_failure class="label__checkbox " type="checkbox"  />
+        <input  id=heart_failure class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
         <span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -414,8 +414,8 @@
 	</span>
     </label>
     <div class="group">
-        <input class="textl" type="text" id="ef_(%)" required="required"/>
-        <label class="textl" for="ef_(%)">Ef (%)</label>
+        <input class="textl" type="text" id="ef" required="required"/>
+        <label class="textl" for="ef">Ef (%)</label>
         <div class="bar"></div>
     </div>
     <label class="label checkmark_label"> Lv Dysfunction
@@ -566,7 +566,7 @@
 	</span>
     </label>
     <label class="label checkmark_label"> Peripheral Vascular Disease
-        <input  id=peripheral_vascular_disease class="label__checkbox " type="checkbox"  />
+        <input  id=peripheral_vascular_disease class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
         <span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
