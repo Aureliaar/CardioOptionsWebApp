@@ -639,33 +639,59 @@
         <div class="bar"></div>
     </div>
 </div>
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<button type="button" onclick="generate()">Click to generate document</button>
-<script>
-    function generate() {
-        // https://github.com/dolanmiu/docx/blob/401ef73/src/file/table/table.ts#L68
-        const doc = new Document();
-
-        //table = table.setFixedWidthLayout();
-        const table = new Table(1, 2, [4000, 1200]);
-        table.getCell(0, 1).addContent(new Paragraph('h3'));
-        table.getCell(0, 1).setWidth(0.75, WidthType.Percentage);
-        table.getCell(1, 1).setWidth(0.25, WidthType.Percentage);
-
-        doc.addTable(table);
-
-        //const table2 = doc.createTable(3, 3, colSizes=[5, 1, 1]);
-        //table2.getCell(2, 2).addContent(new Paragraph('Hello2'));
-
-        const packer = new Packer();
-
-        packer.toBlob(doc).then(blob => {
-            console.log(blob);
-            saveAs(blob, "example.docx");
-            console.log("Document created successfully");
-        });
+<html>
+    <body>
+        <button onclick="generate()">Generate document</button>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.9.1/docxtemplater.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.6.1/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.0.2/jszip-utils.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--
+    Mandatory in IE 6, 7, 8 and 9.
+    -->
+    <!--[if IE]>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.0.2/jszip-utils-ie.js"></script>
+    <![endif]-->
+    <script>
+    function loadFile(url,callback){
+        JSZipUtils.getBinaryContent(url,callback);
     }
-</script>
+    function generate() {
+
+
+        loadFile("interfaccia.docx",function(error,content){
+            if (error) { throw error };
+            var zip = new JSZip(content);
+            var doc=new window.docxtemplater().loadZip(zip);
+            doc.setData({
+                last_name: $('#last_name').val(),
+                dob:'2018'
+            });
+            try {
+                // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
+                doc.render()
+            }
+            catch (error) {
+                var e = {
+                    message: error.message,
+                    name: error.name,
+                    stack: error.stack,
+                    properties: error.properties,
+                }
+                console.log(JSON.stringify({error: e}));
+                // The error thrown here contains additional information when logged with JSON.stringify (it contains a property object).
+                throw error;
+            }
+            var out=doc.getZip().generate({
+                type:"blob",
+                mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            }) //Output the document using Data-URI
+            saveAs(out,"output.docx")
+        })
+    }
+    </script>
 
 </body>
 </html>
