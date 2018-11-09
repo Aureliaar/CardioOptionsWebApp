@@ -80,6 +80,8 @@ def D(name, autocalc=""):
 	</div>"""
 	print sreplace(string, name, autocalcData=autocalc)
 
+fjs = open('jsout.txt', "w+")
+fhtml = open('htmlout.txt', "w+")
 with open("spec.txt") as fin:
 	while True:
 		line = fin.readline()[:-1]
@@ -92,21 +94,28 @@ with open("spec.txt") as fin:
 		stuff = line[2:].split(", ", 1)
 		text = stuff[0]
 
+		san = sanitize(text).replace("-", "_")
+		if code in ['A', 'T', 'D']:
+			fjs.write("{0}:$('#{0}').val(),\n".format(san))
+		if code in ['M', 'C']:
+			fjs.write("{0}:$('[name={0}],:checked').val(),\n".format(san))
+
 		options=[]
 		if (len(stuff) > 1): options = stuff[1].split(", ")
 
-		if (code=="T"):
-			T(text, autocalc)
-		if (code=="C"):
-			C(text, autocalc)
-		if (code=="A"):
-			A(text, options, autocalc)
-		if (code=="M"):
-			M(text, options, autocalc)
-		if (code=="H"):
-			H(text)
-		if (code=="D"):
-			D(text)
+		#if (code=="T"):
+		#	T(text, autocalc)
+		#if (code=="C"):
+		#	C(text, autocalc)
+		#if (code=="A"):
+		#	A(text, options, autocalc)
+		#if (code=="M"):
+		#	M(text, options, autocalc)
+		#if (code=="H"):
+		#	H(text)
+		#if (code=="D"):
+		#	D(text)
 
 		
 
+fjs.close()
