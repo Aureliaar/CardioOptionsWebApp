@@ -67,3 +67,120 @@ $('#date_of_event').on('input', function(){
     $('#recent_mi').prop("disabled", true);
     $("#recent_mi").trigger();
 });
+
+function loadFile(url,callback){
+    JSZipUtils.getBinaryContent(url,callback);
+}
+function generate() {
+    loadFile("interfaccia.docx",function(error,content){
+        if (error) { throw error };
+        var zip = new JSZip(content);
+        var doc=new window.docxtemplater().loadZip(zip);
+        doc.setData({
+            last_name:$('#last_name').val(),
+first_name:$('#first_name').val(),
+date_of_birth:$('#date_of_birth').val(),
+age:$('#age').val(),
+sex:$('[name=sex],:checked').val(),
+weight:$('#weight').val(),
+height:$('#height').val(),
+body_mass_index:$('#body_mass_index').val(),
+current_smoke:$('[name=current_smoke],:checked').val(),
+previous_smoke:$('[name=previous_smoke],:checked').val(),
+alcohol_usage_history:$('[name=alcohol_usage_history],:checked').val(),
+drug_usage_history:$('[name=drug_usage_history],:checked').val(),
+death:$('[name=death],:checked').val(),
+cause_of_death:$('#cause_of_death').val(),
+chronic_pulmonary_disease:$('[name=chronic_pulmonary_disease],:checked').val(),
+abnormal_liver_function:$('[name=abnormal_liver_function],:checked').val(),
+dyslipidemia:$('#dyslipidemia').val(),
+labile_inrs:$('[name=labile_inrs],:checked').val(),
+diabetes_mellitus:$('[name=diabetes_mellitus],:checked').val(),
+dm_insulin_dependent:$('[name=dm_insulin_dependent],:checked').val(),
+creatinine:$('#creatinine').val(),
+serum_creatinine:$('#serum_creatinine').val(),
+creatinine_cleareance:$('#creatinine_cleareance').val(),
+renal_impairment:$('[name=renal_impairment],:checked').val(),
+dyalisis:$('[name=dyalisis],:checked').val(),
+egfr_cockcroft_gault:$('#egfr_cockcroft_gault').val(),
+baseline_creatinine:$('#baseline_creatinine').val(),
+peak_creatinine:$('#peak_creatinine').val(),
+discharge_creatinine:$('#discharge_creatinine').val(),
+chronic_kidney_disease:$('[name=chronic_kidney_disease],:checked').val(),
+abnormal_renal_function:$('[name=abnormal_renal_function],:checked').val(),
+neurological_dysfunction_disease:$('[name=neurological_dysfunction_disease],:checked').val(),
+syncope:$('[name=syncope],:checked').val(),
+poor_mobility:$('[name=poor_mobility],:checked').val(),
+transient_ischemic_attack:$('[name=transient_ischemic_attack],:checked').val(),
+type_of_operation:$('#type_of_operation').val(),
+operation_date:$('#operation_date').val(),
+urgency:$('[name=urgency],:checked').val(),
+bleeding:$('[name=bleeding],:checked').val(),
+critical_preoperative_state:$('[name=critical_preoperative_state],:checked').val(),
+weight_of_the_intervention:$('[name=weight_of_the_intervention],:checked').val(),
+myocardial_infarction:$('[name=myocardial_infarction],:checked').val(),
+date_of_event:$('#date_of_event').val(),
+recent_mi:$('[name=recent_mi],:checked').val(),
+post_infarct_septal_rupture:$('[name=post_infarct_septal_rupture],:checked').val(),
+heart_failure:$('[name=heart_failure],:checked').val(),
+nyha_class:$('[name=nyha_class],:checked').val(),
+angina_pectoris:$('[name=angina_pectoris],:checked').val(),
+ccs_class:$('[name=ccs_class],:checked').val(),
+unstable_angina:$('[name=unstable_angina],:checked').val(),
+atrial_fibrillation:$('[name=atrial_fibrillation],:checked').val(),
+coronary_artery_disease:$('[name=coronary_artery_disease],:checked').val(),
+ef:$('#ef').val(),
+lv_dysfunction:$('[name=lv_dysfunction],:checked').val(),
+pre_ar_grade:$('[name=pre_ar_grade],:checked').val(),
+eroa:$('#eroa').val(),
+pre_mr_grade:$('[name=pre_mr_grade],:checked').val(),
+vena_contracta:$('#vena_contracta').val(),
+pre_as_grade:$('[name=pre_as_grade],:checked').val(),
+ava:$('#ava').val(),
+mean_gradient:$('#mean_gradient').val(),
+jet_velocity:$('#jet_velocity').val(),
+pre_ms_grade:$('[name=pre_ms_grade],:checked').val(),
+valve_area:$('#valve_area').val(),
+last_follow_up:$('#last_follow_up').val(),
+previous_cardiac_surgery:$('[name=previous_cardiac_surgery],:checked').val(),
+previous_pci:$('[name=previous_pci],:checked').val(),
+previous_cabg:$('[name=previous_cabg],:checked').val(),
+previous_pmk:$('[name=previous_pmk],:checked').val(),
+extracardiac_arteriopathy:$('[name=extracardiac_arteriopathy],:checked').val(),
+surgery_on_thoracic_aorta:$('[name=surgery_on_thoracic_aorta],:checked').val(),
+active_endocarditis:$('[name=active_endocarditis],:checked').val(),
+arterial_hypertension:$('[name=arterial_hypertension],:checked').val(),
+peripheral_vascular_disease:$('[name=peripheral_vascular_disease],:checked').val(),
+chronic_obstructive_pulmonary_disease:$('[name=chronic_obstructive_pulmonary_disease],:checked').val(),
+cardio_vascular_disease:$('[name=cardio_vascular_disease],:checked').val(),
+paps:$('#paps').val(),
+pulmonary_hypertension:$('[name=pulmonary_hypertension],:checked').val(),
+pulmonary_hypertension_grade:$('[name=pulmonary_hypertension_grade],:checked').val(),
+euroscore:$('#euroscore').val(),
+euroscore_ii:$('#euroscore_ii').val(),
+log_euroscore:$('#log_euroscore').val(),
+cha2ds2_vasc_score:$('#cha2ds2_vasc_score').val(),
+has_bled_scor:$('#has_bled_scor').val(),
+        });
+        try {
+            // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
+            doc.render()
+        }
+        catch (error) {
+            var e = {
+                message: error.message,
+                name: error.name,
+                stack: error.stack,
+                properties: error.properties,
+            }
+            console.log(JSON.stringify({error: e}));
+            // The error thrown here contains additional information when logged with JSON.stringify (it contains a property object).
+            throw error;
+        }
+        var out=doc.getZip().generate({
+            type:"blob",
+            mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        }) //Output the document using Data-URI
+        saveAs(out,"output.docx")
+    })
+}
