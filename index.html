@@ -659,8 +659,6 @@
         JSZipUtils.getBinaryContent(url,callback);
     }
     function generate() {
-
-
         loadFile("interfaccia.docx",function(error,content){
             if (error) { throw error };
             var zip = new JSZip(content);
@@ -687,7 +685,6 @@ labile_inrs:$('[name=labile_inrs],:checked').val(),
 diabetes_mellitus:$('[name=diabetes_mellitus],:checked').val(),
 dm_insulin_dependent:$('[name=dm_insulin_dependent],:checked').val(),
 creatinine:$('#creatinine').val(),
-creatinine_gt:$('[name=creatinine&gt2.26_mg/dl],:checked').val(),
 serum_creatinine:$('#serum_creatinine').val(),
 creatinine_cleareance:$('#creatinine_cleareance').val(),
 renal_impairment:$('[name=renal_impairment],:checked').val(),
@@ -751,8 +748,6 @@ euroscore_ii:$('#euroscore_ii').val(),
 log_euroscore:$('#log_euroscore').val(),
 cha2ds2_vasc_score:$('#cha2ds2_vasc_score').val(),
 has_bled_scor:$('#has_bled_scor').val(),
-
-
             });
             try {
                 // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
