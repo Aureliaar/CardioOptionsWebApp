@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="scss/text.css">
     <!-- Checkmark -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/checkmark.css"/>
+    <link rel="stylesheet" href="css/checkmark.css" />
     <script src="https://unpkg.com/docx@4.0.0/build/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.9.1/docxtemplater.js"></script>
@@ -28,632 +29,994 @@
     <script src="js/main.js"></script>
 
 </head>
+
 <body>
-<!--[if lte IE 9]>
+    <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
+    <div class="container">
+        <h1>Patient Related Factors</h1>
 
-<div class="container"><h1>Patient Related Factors</h1>
+        <div class="group">
+            <input class="textl" type="text" id="last_name" required="required" />
+            <label class="textl" for="last_name">Last Name</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="first_name" required="required" />
+            <label class="textl" for="first_name">First Name</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_birth" required="required" />
+            <label class="textl" for="date_of_birth">Date of Birth</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl euroscore" type="text" id="age" value="Autocalc" data-euroscoreWeight="1" disabled>
+            <label class="textl" for="age">Age</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Gender" class="plan cf">
+                <h2>Gender</h2>
+                <input class="MyRadioInput euroscore cha2ds2" type="radio" name="gender" id="gendermale" value="gendermale"><label
+                    class="two col" for="gendermale">Male</label>
+                <input class="MyRadioInput euroscore cha2ds2" type="radio" name="gender" id="genderfemale" value="genderfemale"><label
+                    class="two col" for="genderfemale">Female</label>
 
-    <div class="group">
-        <input class="textl" type="text" id="last_name" required="required"/>
-        <label class="textl" for="last_name">Last Name</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="first_name" required="required"/>
-        <label class="textl" for="first_name">First Name</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="date" id="date_of_birth" required="required"/>
-        <label class="textl" for="date_of_birth">Date of Birth</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl euroscore" type="text" id="age" value="Autocalc"  data-euroscoreWeight="1"  disabled>
-        <label class="textl" for="age">Age</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Sex" class="plan cf">
-            <h2>Sex</h2>
-            <input class="MyRadioInput euroscore cha2ds2" type="radio" name="sex" id="sexmale" value="sexmale"><label class="two col" for="sexmale">Male</label>
-            <input class="MyRadioInput euroscore cha2ds2" type="radio" name="sex" id="sexfemale" value="sexfemale"><label class="two col" for="sexfemale">Female</label>
+            </section>
+        </form>
+        <div class="group">
+            <input class="textl" type="text" id="weight" required="required" />
+            <label class="textl" for="weight">Weight (kg)</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="height" required="required" />
+            <label class="textl" for="height">Height (cm)</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl " type="text" id="bmi" value="Autocalc" disabled>
+            <label class="textl" for="bmi">BMI</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Death
+            <input id=death class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_death" required="required" />
+            <label class="textl" for="date_of_death">Date of death</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Cardiovascular death
+            <input id=cardiovascular_death class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Risk Factors</h1>
 
-        </section></form>
-    <div class="group">
-        <input class="textl" type="text" id="weight" required="required"/>
-        <label class="textl" for="weight">Weight (kg)</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="height" required="required"/>
-        <label class="textl" for="height">Height (cm)</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl " type="text" id="body_mass_index" value="Autocalc"  disabled>
-        <label class="textl" for="body_mass_index">Body Mass Index</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Current Smoke
-        <input  id=current_smoke class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Previous Smoke
-        <input  id=previous_smoke class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Alcohol Usage History
-        <input  id=alcohol_usage_history class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Drug Usage History
-        <input  id=drug_usage_history class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Death
-        <input  id=death class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl" type="text" id="cause_of_death" required="required"/>
-        <label class="textl" for="cause_of_death">Cause of Death</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Chronic Pulmonary Disease
-        <input  id=chronic_pulmonary_disease class="label__checkbox euroscore log-euroscore" type="checkbox"  data-euroscoreWeight="1"  data-log-euroscoreWeight="0.4931341"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Abnormal Liver Function
-        <input  id=abnormal_liver_function class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <h1>Blood Analysis</h1>
+        <label class="label checkmark_label"> Current Smoke
+            <input id=current_smoke class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Smoke
+            <input id=previous_smoke class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="cigarettes_per_day" required="required" />
+            <label class="textl" for="cigarettes_per_day">Cigarettes per day</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Drug Usage History
+            <input id=drug_usage_history class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Alcohol Usage History
+            <input id=alcohol_usage_history class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="dyslipidemia" required="required" />
+            <label class="textl" for="dyslipidemia">Dyslipidemia</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="diabetes_mellitus" required="required" />
+            <label class="textl" for="diabetes_mellitus">Diabetes mellitus</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Diabetes Type I
+            <input id=diabetes_type_i class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Diabetes Type II
+            <input id=diabetes_type_ii class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Arterial hypertension
+            <input id=arterial_hypertension class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Peripheral vascular disease
+            <input id=peripheral_vascular_disease class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Familiarity CVD
+            <input id=familiarity_cvd class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Chronic kidney disease
+            <input id=chronic_kidney_disease class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Allergies and intolerances</h1>
 
-    <div class="group">
-        <input class="textl" type="text" id="dyslipidemia" required="required"/>
-        <label class="textl" for="dyslipidemia">Dyslipidemia</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Labile Inrs
-        <input  id=labile_inrs class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Diabetes Mellitus
-        <input  id=diabetes_mellitus class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Dm Insulin Dependent
-        <input  id=dm_insulin_dependent class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <h1>Renal Function</h1>
+        <div class="group">
+            <input class="textl" type="text" id="mdc" required="required" />
+            <label class="textl" for="mdc">MDC</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="food_allergies_or_intolerances" required="required" />
+            <label class="textl" for="food_allergies_or_intolerances">Food allergies or intolerances</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="latex" required="required" />
+            <label class="textl" for="latex">Latex</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="medicament" required="required" />
+            <label class="textl" for="medicament">Medicament</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="respiratory_allergies" required="required" />
+            <label class="textl" for="respiratory_allergies">Respiratory allergies</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="other_allergies" required="required" />
+            <label class="textl" for="other_allergies">Other allergies</label>
+            <div class="bar"></div>
+        </div>
+        <h1>Infectious diseases</h1>
 
-    <div class="group">
-        <input class="textl" type="text" id="creatinine" required="required"/>
-        <label class="textl" for="creatinine">Creatinine</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Creatinine&gt2.26 Mg/dl (200 Μmol/l)
-        <input  id=creatinine&gt2.26_mg/dl class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl" type="text" id="serum_creatinine" required="required"/>
-        <label class="textl" for="serum_creatinine">Serum Creatinine</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="creatinine_cleareance" required="required"/>
-        <label class="textl" for="creatinine_cleareance">Creatinine Cleareance</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Renal Impairment" class="plan cf">
-            <h2>Renal Impairment</h2>
-            <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnormal" value="renal_impairmentnormal"><label class="three col" for="renal_impairmentnormal">Normal</label>
-            <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentmoderate" value="renal_impairmentmoderate"><label class="three col" for="renal_impairmentmoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentsevere" value="renal_impairmentsevere"><label class="three col" for="renal_impairmentsevere">Severe</label>
+        <label class="label checkmark_label"> AIDS
+            <input id=aids class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Hepatitis A
+            <input id=hepatitis_a class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Hepatitis B
+            <input id=hepatitis_b class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Hepatitis C
+            <input id=hepatitis_c class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="other_infectious_diseases" required="required" />
+            <label class="textl" for="other_infectious_diseases">Other infectious diseases</label>
+            <div class="bar"></div>
+        </div>
+        <h1>Blood Analysis</h1>
 
-        </section></form>
-    <label class="label checkmark_label"> Dialysis 
-        <input  id=dialysis  class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl " type="text" id="egfr_cockcroft_gault" value="Autocalc"  disabled>
-        <label class="textl" for="egfr_cockcroft_gault">Egfr Cockcroft Gault</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="baseline_creatinine" required="required"/>
-        <label class="textl" for="baseline_creatinine">Baseline Creatinine</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="peak_creatinine" required="required"/>
-        <label class="textl" for="peak_creatinine">Peak Creatinine</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="discharge_creatinine" required="required"/>
-        <label class="textl" for="discharge_creatinine">Discharge Creatinine</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Chronic Kidney Disease
-        <input  id=chronic_kidney_disease class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Abnormal Renal Function
-        <input  id=abnormal_renal_function class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <h1>Neurological Factors</h1>
+        <div class="group">
+            <input class="textl" type="text" id="labile_inrs" required="required" />
+            <label class="textl" for="labile_inrs">Labile INRs</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> DM insulin dependent
+            <input id=dm_insulin_dependent class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Renal Function</h1>
 
-    <label class="label checkmark_label"> Neurological Dysfunction Disease
-        <input  id=neurological_dysfunction_disease class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Syncope
-        <input  id=syncope class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Poor Mobility
-        <input  id=poor_mobility class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Transient Ischemic Attack
-        <input  id=transient_ischemic_attack class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="2"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <h1>Surgical Related Factors</h1>
+        <div class="group">
+            <input class="textl" type="text" id="creatinine_[mg/dl]" required="required" />
+            <label class="textl" for="creatinine_[mg/dl]">creatinine [mg/dL]</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Creatinine>1.8 mg/dL
+            <input id=creatinine>1.8_mg/dl class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="serum_creatinine_[mg/dl]" required="required" />
+            <label class="textl" for="serum_creatinine_[mg/dl]">Serum creatinine [mg/dL]</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="creatinine_clearance_[ml/min]" required="required" />
+            <label class="textl" for="creatinine_clearance_[ml/min]">Creatinine clearance [ml/min]</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="peak_creatinine_[mg/dl]" required="required" />
+            <label class="textl" for="peak_creatinine_[mg/dl]">Peak creatinine [mg/dL]</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="discharge_creatinine_[mg/dl]" required="required" />
+            <label class="textl" for="discharge_creatinine_[mg/dl]">Discharge creatinine [mg/dL]</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Renal Impairment" class="plan cf">
+                <h2>Renal Impairment</h2>
+                <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnormal" value="renal_impairmentnormal"><label
+                    class="three col" for="renal_impairmentnormal">Normal</label>
+                <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentmoderate" value="renal_impairmentmoderate"><label
+                    class="three col" for="renal_impairmentmoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentsevere" value="renal_impairmentsevere"><label
+                    class="three col" for="renal_impairmentsevere">Severe</label>
 
-    <div class="group">
-        <input class="textl" type="text" id="type_of_operation" required="required"/>
-        <label class="textl" for="type_of_operation">Type of Operation</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="date" id="operation_date" required="required"/>
-        <label class="textl" for="operation_date">Operation Date</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Urgency" class="plan cf">
-            <h2>Urgency</h2>
-            <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyelective" value="urgencyelective"><label class="four col" for="urgencyelective">Elective</label>
-            <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyurgent" value="urgencyurgent"><label class="four col" for="urgencyurgent">Urgent</label>
-            <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyemergency" value="urgencyemergency"><label class="four col" for="urgencyemergency">Emergency</label>
-            <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencysalvage" value="urgencysalvage"><label class="four col" for="urgencysalvage">Salvage</label>
+            </section>
+        </form>
+        <label class="label checkmark_label"> Dialysis
+            <input id=dialysis class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="egfr_cockcroft_gault" required="required" />
+            <label class="textl" for="egfr_cockcroft_gault">eGFR Cockcroft Gault</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="baseline_creatinine" required="required" />
+            <label class="textl" for="baseline_creatinine">Baseline creatinine</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Abnormal renal function
+            <input id=abnormal_renal_function class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Neurological factors</h1>
 
-        </section></form>
-    <label class="label checkmark_label"> Bleeding
-        <input  id=bleeding class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Critical Preoperative State
-        <input  id=critical_preoperative_state class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="3"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <form class="radio-form cf">
-        <section id = "section-Weight of The Intervention" class="plan cf">
-            <h2>Weight of The Intervention</h2>
-            <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_interventionisolated_cabg" value="weight_of_the_interventionisolated_cabg"><label class="four col" for="weight_of_the_interventionisolated_cabg">Isolated Cabg</label>
-            <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_interventionsingle_non_cabg" value="weight_of_the_interventionsingle_non_cabg"><label class="four col" for="weight_of_the_interventionsingle_non_cabg">Single Non Cabg</label>
-            <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_intervention2_procedures" value="weight_of_the_intervention2_procedures"><label class="four col" for="weight_of_the_intervention2_procedures">2 Procedures</label>
-            <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_intervention3_procedures" value="weight_of_the_intervention3_procedures"><label class="four col" for="weight_of_the_intervention3_procedures">3 Procedures</label>
+        <label class="label checkmark_label"> Neurological dysfunction disease
+            <input id=neurological_dysfunction_disease class="label__checkbox euroscore" type="checkbox"
+                data-euroscoreWeight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Syncope
+            <input id=syncope class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_event" required="required" />
+            <label class="textl" for="date_of_event">Date of event</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Cerebral vascular event
+            <input id=cerebral_vascular_event class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> TIA
+            <input id=tia class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_event" required="required" />
+            <label class="textl" for="date_of_event">Date of event</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Stroke
+            <input id=stroke class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_event" required="required" />
+            <label class="textl" for="date_of_event">date of event</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Poor mobility
+            <input id=poor_mobility class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Procedural/surgical related factors</h1>
 
-        </section></form>
-    <h1>Cardiac Related Factors</h1>
+        <div class="group">
+            <input class="textl" type="text" id="type_of_surgery" required="required" />
+            <label class="textl" for="type_of_surgery">Type of surgery</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_surgery" required="required" />
+            <label class="textl" for="date_of_surgery">Date of surgery</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Urgency" class="plan cf">
+                <h2>Urgency</h2>
+                <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyelective" value="urgencyelective"><label
+                    class="four col" for="urgencyelective">Elective</label>
+                <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyurgent" value="urgencyurgent"><label
+                    class="four col" for="urgencyurgent">Urgent</label>
+                <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyemergency" value="urgencyemergency"><label
+                    class="four col" for="urgencyemergency">Emergency</label>
+                <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencysalvage" value="urgencysalvage"><label
+                    class="four col" for="urgencysalvage">Salvage</label>
 
-    <label class="label checkmark_label"> Myocardial Infarction
-        <input  id=myocardial_infarction class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl" type="date" id="date_of_event" required="required"/>
-        <label class="textl" for="date_of_event">Date of Event</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Recent MI
-        <input  id=recent_mi class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2" disabled />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Post Infarct Septal Rupture
-        <input  id=post_infarct_septal_rupture class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="4"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Heart Failure
-        <input  id=heart_failure class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <form class="radio-form cf">
-        <section id = "section-NYHA Class" class="plan cf">
-            <h2>NYHA Class</h2>
-            <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classi" value="nyha_classi"><label class="four col" for="nyha_classi">I</label>
-            <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classii" value="nyha_classii"><label class="four col" for="nyha_classii">II</label>
-            <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiii" value="nyha_classiii"><label class="four col" for="nyha_classiii">III</label>
-            <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiv" value="nyha_classiv"><label class="four col" for="nyha_classiv">IV</label>
+            </section>
+        </form>
+        <label class="label checkmark_label"> Bleeding
+            <input id=bleeding class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Critical Preoperative State
+            <input id=critical_preoperative_state class="label__checkbox euroscore" type="checkbox"
+                data-euroscoreWeight="3" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <form class="radio-form cf">
+            <section id="section-Weight of The Intervention" class="plan cf">
+                <h2>Weight of The Intervention</h2>
+                <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_interventionisolated_cabg"
+                    value="weight_of_the_interventionisolated_cabg"><label class="four col" for="weight_of_the_interventionisolated_cabg">Isolated
+                    Cabg</label>
+                <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_interventionsingle_non_cabg"
+                    value="weight_of_the_interventionsingle_non_cabg"><label class="four col" for="weight_of_the_interventionsingle_non_cabg">Single
+                    Non Cabg</label>
+                <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_intervention2_procedures"
+                    value="weight_of_the_intervention2_procedures"><label class="four col" for="weight_of_the_intervention2_procedures">2
+                    Procedures</label>
+                <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_intervention3_procedures"
+                    value="weight_of_the_intervention3_procedures"><label class="four col" for="weight_of_the_intervention3_procedures">3
+                    Procedures</label>
 
-        </section></form>
-    <label class="label checkmark_label"> Angina Pectoris
-        <input  id=angina_pectoris class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <form class="radio-form cf">
-        <section id = "section-CCS Class" class="plan cf">
-            <h2>CCS Class</h2>
-            <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_class0" value="ccs_class0"><label class="five col" for="ccs_class0">0</label>
-            <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classi" value="ccs_classi"><label class="five col" for="ccs_classi">I</label>
-            <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classii" value="ccs_classii"><label class="five col" for="ccs_classii">II</label>
-            <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classiii" value="ccs_classiii"><label class="five col" for="ccs_classiii">III</label>
-            <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classiv" value="ccs_classiv"><label class="five col" for="ccs_classiv">IV</label>
+            </section>
+        </form>
+        <h1>Cardiac Related Factors</h1>
 
-        </section></form>
-    <label class="label checkmark_label"> Unstable Angina
-        <input  id=unstable_angina class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Atrial Fibrillation
-        <input  id=atrial_fibrillation class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Coronary Artery Disease
-        <input  id=coronary_artery_disease class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl" type="text" id="ef" required="required"/>
-        <label class="textl" for="ef">Ef (%)</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Lv Dysfunction
-        <input  id=lv_dysfunction class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="1"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <form class="radio-form cf">
-        <section id = "section-Pre-ar Grade" class="plan cf">
-            <h2>Pre-ar Grade</h2>
-            <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_grade0" value="pre-ar_grade0"><label class="four col" for="pre-ar_grade0">0</label>
-            <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_gradeslight" value="pre-ar_gradeslight"><label class="four col" for="pre-ar_gradeslight">Slight</label>
-            <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_grademoderate" value="pre-ar_grademoderate"><label class="four col" for="pre-ar_grademoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_gradesevere" value="pre-ar_gradesevere"><label class="four col" for="pre-ar_gradesevere">Severe</label>
+        <label class="label checkmark_label"> Previous MI
+            <input id=previous_mi class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Recent MI
+            <input id=recent_mi class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_mi" required="required" />
+            <label class="textl" for="date_mi">Date MI</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> STEMI
+            <input id=stemi class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> NSTEMI
+            <input id=nstemi class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Post infarct septal rupture
+            <input id=post_infarct_septal_rupture class="label__checkbox euroscore" type="checkbox"
+                data-euroscoreWeight="4" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_stemi" required="required" />
+            <label class="textl" for="date_stemi">Date STEMI</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="date" id="date_nstemi" required="required" />
+            <label class="textl" for="date_nstemi">Date NSTEMI</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Heart Failure
+            <input id=heart_failure class="label__checkbox cha2ds2" type="checkbox" data-cha2ds2Weight="1" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <form class="radio-form cf">
+            <section id="section-NYHA Class" class="plan cf">
+                <h2>NYHA Class</h2>
+                <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classi" value="nyha_classi"><label
+                    class="four col" for="nyha_classi">I</label>
+                <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classii" value="nyha_classii"><label
+                    class="four col" for="nyha_classii">II</label>
+                <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiii" value="nyha_classiii"><label
+                    class="four col" for="nyha_classiii">III</label>
+                <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiv" value="nyha_classiv"><label
+                    class="four col" for="nyha_classiv">IV</label>
 
-        </section></form>
-    <div class="group">
-        <input class="textl" type="text" id="eroa" required="required"/>
-        <label class="textl" for="eroa">Eroa</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Pre-mr Grade" class="plan cf">
-            <h2>Pre-mr Grade</h2>
-            <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_grade0" value="pre-mr_grade0"><label class="four col" for="pre-mr_grade0">0</label>
-            <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_gradeslight" value="pre-mr_gradeslight"><label class="four col" for="pre-mr_gradeslight">Slight</label>
-            <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_grademoderate" value="pre-mr_grademoderate"><label class="four col" for="pre-mr_grademoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_gradesevere" value="pre-mr_gradesevere"><label class="four col" for="pre-mr_gradesevere">Severe</label>
+            </section>
+        </form>
+        <label class="label checkmark_label"> Stable angina
+            <input id=stable_angina class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <form class="radio-form cf">
+            <section id="section-CCS Class" class="plan cf">
+                <h2>CCS Class</h2>
+                <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_class0" value="ccs_class0"><label
+                    class="five col" for="ccs_class0">0</label>
+                <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classi" value="ccs_classi"><label
+                    class="five col" for="ccs_classi">I</label>
+                <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classii" value="ccs_classii"><label
+                    class="five col" for="ccs_classii">II</label>
+                <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classiii" value="ccs_classiii"><label
+                    class="five col" for="ccs_classiii">III</label>
+                <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classiv" value="ccs_classiv"><label
+                    class="five col" for="ccs_classiv">IV</label>
 
-        </section></form>
-    <div class="group">
-        <input class="textl" type="text" id="vena_contracta" required="required"/>
-        <label class="textl" for="vena_contracta">Vena Contracta</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Pre-as Grade" class="plan cf">
-            <h2>Pre-as Grade</h2>
-            <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_grade0" value="pre-as_grade0"><label class="four col" for="pre-as_grade0">0</label>
-            <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_gradeslight" value="pre-as_gradeslight"><label class="four col" for="pre-as_gradeslight">Slight</label>
-            <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_grademoderate" value="pre-as_grademoderate"><label class="four col" for="pre-as_grademoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_gradesevere" value="pre-as_gradesevere"><label class="four col" for="pre-as_gradesevere">Severe</label>
+            </section>
+        </form>
+        <label class="label checkmark_label"> Unstable Angina
+            <input id=unstable_angina class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Atrial Fibrillation
+            <input id=atrial_fibrillation class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Coronary Artery Disease
+            <input id=coronary_artery_disease class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="ef" required="required" />
+            <label class="textl" for="ef">Ef (%)</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Lv Dysfunction
+            <input id=lv_dysfunction class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="1" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <form class="radio-form cf">
+            <section id="section-Pre-ar Grade" class="plan cf">
+                <h2>Pre-ar Grade</h2>
+                <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_grade0" value="pre-ar_grade0"><label
+                    class="four col" for="pre-ar_grade0">0</label>
+                <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_gradeslight" value="pre-ar_gradeslight"><label
+                    class="four col" for="pre-ar_gradeslight">Slight</label>
+                <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_grademoderate" value="pre-ar_grademoderate"><label
+                    class="four col" for="pre-ar_grademoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="pre-ar_grade" id="pre-ar_gradesevere" value="pre-ar_gradesevere"><label
+                    class="four col" for="pre-ar_gradesevere">Severe</label>
 
-        </section></form>
-    <div class="group">
-        <input class="textl" type="text" id="ava" required="required"/>
-        <label class="textl" for="ava">Ava</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="mean_gradient" required="required"/>
-        <label class="textl" for="mean_gradient">Mean Gradient</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="jet_velocity" required="required"/>
-        <label class="textl" for="jet_velocity">Jet Velocity</label>
-        <div class="bar"></div>
-    </div>
-    <form class="radio-form cf">
-        <section id = "section-Pre-ms Grade" class="plan cf">
-            <h2>Pre-ms Grade</h2>
-            <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_grade0" value="pre-ms_grade0"><label class="four col" for="pre-ms_grade0">0</label>
-            <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_gradeslight" value="pre-ms_gradeslight"><label class="four col" for="pre-ms_gradeslight">Slight</label>
-            <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_grademoderate" value="pre-ms_grademoderate"><label class="four col" for="pre-ms_grademoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_gradesevere" value="pre-ms_gradesevere"><label class="four col" for="pre-ms_gradesevere">Severe</label>
+            </section>
+        </form>
+        <div class="group">
+            <input class="textl" type="text" id="eroa" required="required" />
+            <label class="textl" for="eroa">Eroa</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Pre-mr Grade" class="plan cf">
+                <h2>Pre-mr Grade</h2>
+                <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_grade0" value="pre-mr_grade0"><label
+                    class="four col" for="pre-mr_grade0">0</label>
+                <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_gradeslight" value="pre-mr_gradeslight"><label
+                    class="four col" for="pre-mr_gradeslight">Slight</label>
+                <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_grademoderate" value="pre-mr_grademoderate"><label
+                    class="four col" for="pre-mr_grademoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="pre-mr_grade" id="pre-mr_gradesevere" value="pre-mr_gradesevere"><label
+                    class="four col" for="pre-mr_gradesevere">Severe</label>
 
-        </section></form>
-    <div class="group">
-        <input class="textl" type="text" id="valve_area" required="required"/>
-        <label class="textl" for="valve_area">Valve Area</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl" type="text" id="last_follow_up" required="required"/>
-        <label class="textl" for="last_follow_up">Last Follow Up</label>
-        <div class="bar"></div>
-    </div>
-    <h1>Previous Cardiac Surgery</h1>
+            </section>
+        </form>
+        <div class="group">
+            <input class="textl" type="text" id="vena_contracta" required="required" />
+            <label class="textl" for="vena_contracta">Vena Contracta</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Pre-as Grade" class="plan cf">
+                <h2>Pre-as Grade</h2>
+                <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_grade0" value="pre-as_grade0"><label
+                    class="four col" for="pre-as_grade0">0</label>
+                <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_gradeslight" value="pre-as_gradeslight"><label
+                    class="four col" for="pre-as_gradeslight">Slight</label>
+                <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_grademoderate" value="pre-as_grademoderate"><label
+                    class="four col" for="pre-as_grademoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="pre-as_grade" id="pre-as_gradesevere" value="pre-as_gradesevere"><label
+                    class="four col" for="pre-as_gradesevere">Severe</label>
 
-    <label class="label checkmark_label"> Previous Cardiac Surgery
-        <input  id=previous_cardiac_surgery class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="3"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Previous Pci
-        <input  id=previous_pci class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Previous Cabg
-        <input  id=previous_cabg class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Previous Pmk
-        <input  id=previous_pmk class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Extracardiac Arteriopathy
-        <input  id=extracardiac_arteriopathy class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Surgery On Thoracic Aorta
-        <input  id=surgery_on_thoracic_aorta class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="3"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Active Endocarditis
-        <input  id=active_endocarditis class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="3"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <h1>Vascular Disease</h1>
+            </section>
+        </form>
+        <div class="group">
+            <input class="textl" type="text" id="ava" required="required" />
+            <label class="textl" for="ava">Ava</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="mean_gradient" required="required" />
+            <label class="textl" for="mean_gradient">Mean Gradient</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="jet_velocity" required="required" />
+            <label class="textl" for="jet_velocity">Jet Velocity</label>
+            <div class="bar"></div>
+        </div>
+        <form class="radio-form cf">
+            <section id="section-Pre-ms Grade" class="plan cf">
+                <h2>Pre-ms Grade</h2>
+                <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_grade0" value="pre-ms_grade0"><label
+                    class="four col" for="pre-ms_grade0">0</label>
+                <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_gradeslight" value="pre-ms_gradeslight"><label
+                    class="four col" for="pre-ms_gradeslight">Slight</label>
+                <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_grademoderate" value="pre-ms_grademoderate"><label
+                    class="four col" for="pre-ms_grademoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="pre-ms_grade" id="pre-ms_gradesevere" value="pre-ms_gradesevere"><label
+                    class="four col" for="pre-ms_gradesevere">Severe</label>
 
-    <label class="label checkmark_label"> Arterial Hypertension
-        <input  id=arterial_hypertension class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Peripheral Vascular Disease
-        <input  id=peripheral_vascular_disease class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Chronic Obstructive Pulmonary Disease
-        <input  id=chronic_obstructive_pulmonary_disease class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <label class="label checkmark_label"> Cardio Vascular Disease
-        <input  id=cardio_vascular_disease class="label__checkbox " type="checkbox"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <div class="group">
-        <input class="textl" type="text" id="paps" required="required"/>
-        <label class="textl" for="paps">Paps</label>
-        <div class="bar"></div>
-    </div>
-    <label class="label checkmark_label"> Pulmonary Hypertension
-        <input  id=pulmonary_hypertension class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
-        <span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-    </label>
-    <form class="radio-form cf">
-        <section id = "section-Pulmonary Hypertension Grade" class="plan cf">
-            <h2>Pulmonary Hypertension Grade</h2>
-            <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_grademoderate" value="pulmonary_hypertension_grademoderate"><label class="two col" for="pulmonary_hypertension_grademoderate">Moderate</label>
-            <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradesevere" value="pulmonary_hypertension_gradesevere"><label class="two col" for="pulmonary_hypertension_gradesevere">Severe</label>
+            </section>
+        </form>
+        <div class="group">
+            <input class="textl" type="text" id="valve_area" required="required" />
+            <label class="textl" for="valve_area">Valve Area</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="last_follow_up" required="required" />
+            <label class="textl" for="last_follow_up">Last Follow Up</label>
+            <div class="bar"></div>
+        </div>
+        <h1>Associated pathologies</h1>
 
-        </section></form>
-    <h1>Score</h1>
+        <label class="label checkmark_label"> Chronic Pulmonary Disease
+            <input id=chronic_pulmonary_disease class="label__checkbox euroscore log-euroscore" type="checkbox"
+                data-euroscoreWeight="1" data-log-euroscoreWeight="0.4931341" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Transient Ischemic Attack
+            <input id=transient_ischemic_attack class="label__checkbox cha2ds2" type="checkbox" data-cha2ds2Weight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Myocardial Infarction
+            <input id=myocardial_infarction class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="date" id="date_of_event" required="required" />
+            <label class="textl" for="date_of_event">Date of Event</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Recent MI
+            <input id=recent_mi class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Post Infarct Septal Rupture
+            <input id=post_infarct_septal_rupture class="label__checkbox euroscore" type="checkbox"
+                data-euroscoreWeight="4" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Previous Cardiac Surgery</h1>
 
-    <div class="group">
-        <input class="textl " type="text" id="euroscore" value="Autocalc"  disabled>
-        <label class="textl" for="euroscore">Euroscore</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl " type="text" id="euroscore_ii" value="Autocalc"  disabled>
-        <label class="textl" for="euroscore_ii">Euroscore II</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl " type="text" id="log-euroscore" value="Autocalc"  disabled>
-        <label class="textl" for="log-euroscore">Log-Euroscore</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl " type="text" id="cha2ds2-vasc_score" value="Autocalc"  disabled>
-        <label class="textl" for="cha2ds2-vasc_score">CHA2DS2-vasc Score</label>
-        <div class="bar"></div>
-    </div>
-    <div class="group">
-        <input class="textl " type="text" id="has-bled_scor" value="Autocalc"  disabled>
-        <label class="textl" for="has-bled_scor">HAS-BLED Scor</label>
-        <div class="bar"></div>
-    </div>
-</div>
-<html>
-    <body>
-        <button onclick="generate()">Generate document</button>
-    </body>
+        <label class="label checkmark_label"> Previous Cardiac Surgery
+            <input id=previous_cardiac_surgery class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="3" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Pci
+            <input id=previous_pci class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Cabg
+            <input id=previous_cabg class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Pmk
+            <input id=previous_pmk class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Extracardiac Arteriopathy
+            <input id=extracardiac_arteriopathy class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Surgery On Thoracic Aorta
+            <input id=surgery_on_thoracic_aorta class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="3" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Active Endocarditis
+            <input id=active_endocarditis class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="3" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <h1>Vascular Disease</h1>
 
-    <!--
+        <label class="label checkmark_label"> Arterial Hypertension
+            <input id=arterial_hypertension class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Peripheral Vascular Disease
+            <input id=peripheral_vascular_disease class="label__checkbox cha2ds2" type="checkbox" data-cha2ds2Weight="1" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Chronic Obstructive Pulmonary Disease
+            <input id=chronic_obstructive_pulmonary_disease class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Cardio Vascular Disease
+            <input id=cardio_vascular_disease class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="paps" required="required" />
+            <label class="textl" for="paps">Paps</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Pulmonary Hypertension
+            <input id=pulmonary_hypertension class="label__checkbox euroscore" type="checkbox" data-euroscoreWeight="2" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <form class="radio-form cf">
+            <section id="section-Pulmonary Hypertension Grade" class="plan cf">
+                <h2>Pulmonary Hypertension Grade</h2>
+                <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_grademoderate"
+                    value="pulmonary_hypertension_grademoderate"><label class="two col" for="pulmonary_hypertension_grademoderate">Moderate</label>
+                <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradesevere"
+                    value="pulmonary_hypertension_gradesevere"><label class="two col" for="pulmonary_hypertension_gradesevere">Severe</label>
+
+            </section>
+        </form>
+        <h1>Score</h1>
+
+        <div class="group">
+            <input class="textl " type="text" id="euroscore" value="Autocalc" disabled>
+            <label class="textl" for="euroscore">Euroscore</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl " type="text" id="euroscore_ii" value="Autocalc" disabled>
+            <label class="textl" for="euroscore_ii">Euroscore II</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl " type="text" id="log-euroscore" value="Autocalc" disabled>
+            <label class="textl" for="log-euroscore">Log-Euroscore</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl " type="text" id="cha2ds2-vasc_score" value="Autocalc" disabled>
+            <label class="textl" for="cha2ds2-vasc_score">CHA2DS2-vasc Score</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl " type="text" id="has-bled_score" value="Autocalc" disabled>
+            <label class="textl" for="has-bled_score">HAS-BLED Score</label>
+            <div class="bar"></div>
+        </div>
+        <label class="label checkmark_label"> Current Oncological diseases
+            <input id=current_oncological_diseases class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Active Oncological diseases
+            <input id=active_oncological_diseases class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Oncological diseases
+            <input id=previous_oncological_diseases class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Current chemotherapy
+            <input id=current_chemotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Active chemotherapy
+            <input id=active_chemotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous chemotherapy
+            <input id=previous_chemotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Current Radiotherapy
+            <input id=current_radiotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Active Radiotherapy
+            <input id=active_radiotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Previous Radiotherapy
+            <input id=previous_radiotherapy class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Family or social support
+            <input id=family_or_social_support class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <label class="label checkmark_label"> Need of assistance
+            <input id=need_of_assistance class="label__checkbox " type="checkbox" />
+            <span class="label__text">
+                <span class="label__check">
+                    <i class="fa fa-check icon"></i>
+                </span>
+            </span>
+        </label>
+        <div class="group">
+            <input class="textl" type="text" id="religion" required="required" />
+            <label class="textl" for="religion">Religion</label>
+            <div class="bar"></div>
+        </div>
+        <div class="group">
+            <input class="textl" type="text" id="profession" required="required" />
+            <label class="textl" for="profession">Profession</label>
+            <div class="bar"></div>
+        </div>
+
+        <!--
     Mandatory in IE 6, 7, 8 and 9.
     -->
-    <!--[if IE]>
+        <!--[if IE]>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.0.2/jszip-utils-ie.js"></script>
     <![endif]-->
 
 
 </body>
+
 </html>

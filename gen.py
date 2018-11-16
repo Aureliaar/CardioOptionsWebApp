@@ -1,8 +1,12 @@
+import re
 
 def sanitize(text):
 	text = text.partition("(")[0]
 	text = text.rstrip()
 	return text.replace(" ", "_").lower()
+def sanitize_for_js(text):
+	return re.sub(r'\W+', '', text)
+
 def autocalcReplace(string, autocalcData):
 	name = ""
 	attribute=""
@@ -95,6 +99,7 @@ with open("spec.txt") as fin:
 		text = stuff[0]
 
 		san = sanitize(text).replace("-", "_")
+		san = sanitize_for_js(san)
 		if code in ['A', 'T', 'D']:
 			fjs.write("{0}:$('#{0}').val(),\n".format(san))
 		if code in ['M', 'C']:
@@ -103,18 +108,18 @@ with open("spec.txt") as fin:
 		options=[]
 		if (len(stuff) > 1): options = stuff[1].split(", ")
 
-		#if (code=="T"):
-		#	T(text, autocalc)
-		#if (code=="C"):
-		#	C(text, autocalc)
-		#if (code=="A"):
-		#	A(text, options, autocalc)
-		#if (code=="M"):
-		#	M(text, options, autocalc)
-		#if (code=="H"):
-		#	H(text)
-		#if (code=="D"):
-		#	D(text)
+		if (code=="T"):
+			T(text, autocalc)
+		if (code=="C"):
+			C(text, autocalc)
+		if (code=="A"):
+			A(text, options, autocalc)
+		if (code=="M"):
+			M(text, options, autocalc)
+		if (code=="H"):
+			H(text)
+		if (code=="D"):
+			D(text)
 
 		
 

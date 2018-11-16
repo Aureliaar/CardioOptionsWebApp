@@ -3,56 +3,84 @@ T Last Name
 T First Name 
 D Date of Birth | Euroscore=0, CHA2DS2VASC=0
 A Age | Euroscore=1
-M Sex, Male, Female | Euroscore=1, CHA2DS2=1
+M Gender, Male, Female | Euroscore=1, CHA2DS2=1
 T Weight (kg)
 T Height (cm)
-A Body Mass Index
-C Current Smoke
-C Previous Smoke 
-C Alcohol Usage History
-C Drug Usage History
+A BMI
 C Death
-T Cause of Death 
-C Chronic Pulmonary Disease | Euroscore=1, Log-Euroscore=0.4931341
-C Abnormal Liver Function
+D Date of death
+C Cardiovascular death
+H Risk Factors
+C Current Smoke
+C Previous Smoke
+T Cigarettes per day 
+C Drug Usage History
+C Alcohol Usage History
+T Dyslipidemia
+T Diabetes mellitus | CHA2DS2=1
+C Diabetes Type I
+C Diabetes Type II
+C Arterial hypertension
+C Peripheral vascular disease
+C Familiarity CVD
+C Chronic kidney disease
+H Allergies and intolerances
+T MDC
+T Food allergies or intolerances
+T Latex
+T Medicament
+T Respiratory allergies
+T Other allergies
+H Infectious diseases
+C AIDS
+C Hepatitis A
+C Hepatitis B
+C Hepatitis C
+T Other infectious diseases
 H Blood Analysis
-T Dyslipidemia, Mg/dl
-C Labile Inrs  
-C Diabetes Mellitus | CHA2DS2=1
-C Dm Insulin Dependent 
+T Labile INRs
+C DM insulin dependent
 H Renal Function
-T Creatinine, Mg/dl
-C Creatinine&gt2.26 Mg/dl (200 Μmol/l) 
-T Serum Creatinine | Euroscore=2
-T Creatinine Cleareance, Ml/min 
+T creatinine [mg/dL]
+C Creatinine>1.8 mg/dL
+T Serum creatinine [mg/dL] | Euroscore=2
+T Creatinine clearance [ml/min]
+T Peak creatinine [mg/dL]
+T Discharge creatinine [mg/dL]
 M Renal Impairment, Normal, Moderate, Severe
-C Dyalisis 
-A Egfr Cockcroft Gault
-T Baseline Creatinine
-T Peak Creatinine 
-T Discharge Creatinine 
-C Chronic Kidney Disease
-C Abnormal Renal Function
-H Neurological Factors
-C Neurological Dysfunction Disease | Euroscore=2
-C Syncope 
-C Poor Mobility 
-C Transient Ischemic Attack | CHA2DS2=2
-H Surgical Related Factors
-T Type of Operation 
-D Operation Date
+C Dialysis
+T eGFR Cockcroft Gault
+T Baseline creatinine
+C Abnormal renal function
+H Neurological factors
+C Neurological dysfunction disease | Euroscore=2
+C Syncope
+D Date of event
+C Cerebral vascular event
+C TIA
+D Date of event
+C Stroke
+D date of event
+C Poor mobility
+H Procedural/surgical related factors
+T Type of surgery
+D Date of surgery
 M Urgency, Elective, Urgent, Emergency, Salvage | Euroscore=2
 C Bleeding 
 C Critical Preoperative State | Euroscore=3
 M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures | Euroscore=2
 H Cardiac Related Factors
-C Myocardial Infarction 
-D Date of Event 
-C Recent MI, disabled | Euroscore=2
-C Post Infarct Septal Rupture | Euroscore=4
+C Previous MI
+C Recent MI | Euroscore=2
+D Date MI
+C STEMI
+C NSTEMI
+C Post infarct septal rupture | Euroscore=4
+D Date STEMI
+D Date NSTEMI
 C Heart Failure | CHA2DS2=1
 M NYHA Class, I, II, III, IV
-C Angina Pectoris
+C Stable angina 
 M CCS Class, 0, I, II, III, IV
 C Unstable Angina | Euroscore=2
 C Atrial Fibrillation 
@@ -66,10 +94,17 @@ T Vena Contracta
 M Pre-as Grade, 0, Slight, Moderate, Severe
 T Ava, Cm2
 T Mean Gradient, Mmhg
-T Jet Velocity, M/s
+T Jet Velocity, m/s
 M Pre-ms Grade, 0, Slight, Moderate, Severe
 T Valve Area, Cm2
-T Last Follow Up 
+T Last Follow Up
+H Associated pathologies
+C Chronic Pulmonary Disease | Euroscore=1, Log-Euroscore=0.4931341
+C Transient Ischemic Attack | CHA2DS2=2
+C Myocardial Infarction 
+D Date of Event 
+C Recent MI, disabled 
+C Post Infarct Septal Rupture | Euroscore=4
 H Previous Cardiac Surgery
 C Previous Cardiac Surgery | Euroscore=3
 C Previous Pci 
@@ -78,7 +113,7 @@ C Previous Pmk
 C Extracardiac Arteriopathy | Euroscore=2
 C Surgery On Thoracic Aorta | Euroscore=3
 C Active Endocarditis | Euroscore=3
-H Vascular Disease	
+H Vascular Disease 
 C Arterial Hypertension
 C Peripheral Vascular Disease | CHA2DS2=1
 C Chronic Obstructive Pulmonary Disease
@@ -92,3 +127,16 @@ A Euroscore II
 A Log-Euroscore
 A CHA2DS2-vasc Score
 A HAS-BLED Score
+C Current Oncological diseases
+C Active Oncological diseases
+C Previous Oncological diseases
+C Current chemotherapy
+C Active chemotherapy
+C Previous chemotherapy
+C Current Radiotherapy
+C Active Radiotherapy
+C Previous Radiotherapy
+C Family or social support
+C Need of assistance
+T Religion
+T Profession
