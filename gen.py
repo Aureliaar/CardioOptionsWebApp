@@ -36,7 +36,7 @@ def T(name, autocalc,):
 	print sreplace(string, name, autocalcData=autocalc)
 
 def M(Name, Options, autocalc):
-	string = """		<input class="MyRadioInput {autocalcClass}" type="radio" name="{id-prefix}" id="{id-prefix}{sanName}" value="{id-prefix}{sanName}"><label class="{num} col" for="{id-prefix}{sanName}">{name}</label>"""
+	string = """		<input class="MyRadioInput {autocalcClass}" type="radio" name="{id-prefix}" id="{id-prefix}{sanName}" value="{sanName}"><label class="{num} col" for="{id-prefix}{sanName}">{name}</label>"""
 	headerstring = """<form class="radio-form cf">
 <section id = "section-{id-prefix}" class="plan cf">
 	<h2>{id-prefix}</h2>"""
@@ -101,9 +101,12 @@ with open("spec.txt") as fin:
 		san = sanitize(text).replace("-", "_")
 		san = sanitize_for_js(san)
 		if code in ['A', 'T', 'D']:
-			fjs.write("{0}:$('#{0}').val(),\n".format(san))
-		if code in ['M', 'C']:
+			fjs.write("{0}:String($('#{0}').val()),\n".format(san))
+		if code in ['M',]:
 			fjs.write("{0}:$('[name={0}],:checked').val(),\n".format(san))
+		if code in ['C']:
+			fjs.write("{0}:checkboxPrint('#{0}'),\n".format(san))
+
 
 		options=[]
 		if (len(stuff) > 1): options = stuff[1].split(", ")

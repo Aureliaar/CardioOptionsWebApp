@@ -1,4 +1,4 @@
-H Patient Related Factors
+H Patient Characteristics
 T Last Name 
 T First Name 
 D Date of Birth | Euroscore=0, CHA2DS2VASC=0
@@ -21,7 +21,7 @@ T Diabetes mellitus | CHA2DS2=1
 C Diabetes Type I
 C Diabetes Type II
 C Arterial hypertension
-C Peripheral vascular disease
+C Peripheral vascular disease | CHA2DS2=1
 C Familiarity CVD
 C Chronic kidney disease
 H Allergies and intolerances
@@ -51,13 +51,14 @@ M Renal Impairment, Normal, Moderate, Severe
 C Dialysis
 T eGFR Cockcroft Gault
 T Baseline creatinine
+C Chronic kidney disease
 C Abnormal renal function
 H Neurological factors
 C Neurological dysfunction disease | Euroscore=2
 C Syncope
 D Date of event
 C Cerebral vascular event
-C TIA
+C TIA | CHA2DS2=2
 D Date of event
 C Stroke
 D date of event
@@ -97,14 +98,7 @@ T Mean Gradient, Mmhg
 T Jet Velocity, m/s
 M Pre-ms Grade, 0, Slight, Moderate, Severe
 T Valve Area, Cm2
-T Last Follow Up
-H Associated pathologies
-C Chronic Pulmonary Disease | Euroscore=1, Log-Euroscore=0.4931341
-C Transient Ischemic Attack | CHA2DS2=2
-C Myocardial Infarction 
-D Date of Event 
-C Recent MI, disabled 
-C Post Infarct Septal Rupture | Euroscore=4
+D Last Follow Up
 H Previous Cardiac Surgery
 C Previous Cardiac Surgery | Euroscore=3
 C Previous Pci 
@@ -113,29 +107,28 @@ C Previous Pmk
 C Extracardiac Arteriopathy | Euroscore=2
 C Surgery On Thoracic Aorta | Euroscore=3
 C Active Endocarditis | Euroscore=3
-H Vascular Disease 
-C Arterial Hypertension
-C Peripheral Vascular Disease | CHA2DS2=1
-C Chronic Obstructive Pulmonary Disease
-C Cardio Vascular Disease 
-T Paps, Mmhg
-C Pulmonary Hypertension | Euroscore=2
-M Pulmonary Hypertension Grade, Moderate, Severe
+H Associated pathologies
+T Previous surgery
+C Oncological diseases
+C Active Oncological diseases
+C Previous Oncological diseases
+C Chemotherapy
+C Active chemotherapy
+C Previous chemotherapy
+C Radiotherapy
+C Active Radiotherapy
+C Previous Radiotherapy
+C Abnormal liver function
+C Pulmonary hypertension| Euroscore=2
+M Pulmonary hypertension grade, Normal, Moderate, Severe
+T PAPs, mmHg
+C Chronic pulmonary disease
 H Score
 A Euroscore
-A Euroscore II
 A Log-Euroscore
 A CHA2DS2-vasc Score
 A HAS-BLED Score
-C Current Oncological diseases
-C Active Oncological diseases
-C Previous Oncological diseases
-C Current chemotherapy
-C Active chemotherapy
-C Previous chemotherapy
-C Current Radiotherapy
-C Active Radiotherapy
-C Previous Radiotherapy
+H Social conditions
 C Family or social support
 C Need of assistance
 T Religion
