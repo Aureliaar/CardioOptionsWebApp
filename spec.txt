@@ -41,12 +41,12 @@ H Blood Analysis
 T Labile INRs
 C DM insulin dependent
 H Renal Function
-T creatinine [mg/dL]
-C Creatinine>1.8 mg/dL
-T Serum creatinine [mg/dL] | Euroscore=2
-T Creatinine clearance [ml/min]
-T Peak creatinine [mg/dL]
-T Discharge creatinine [mg/dL]
+T creatinine, mg/dL
+C Creatinine>1.8, mg/dL
+T Serum creatinine, mg/dL | Euroscore=2
+T Creatinine clearance, ml/min
+T Peak creatinine, mg/dL
+T Discharge creatinine, mg/dL
 M Renal Impairment, Normal, Moderate, Severe
 C Dialysis
 T eGFR Cockcroft Gault
@@ -119,7 +119,7 @@ C Radiotherapy
 C Active Radiotherapy
 C Previous Radiotherapy
 C Abnormal liver function
-C Pulmonary hypertension| Euroscore=2
+C Pulmonary hypertension | Euroscore=2
 M Pulmonary hypertension grade, Normal, Moderate, Severe
 T PAPs, mmHg
 C Chronic pulmonary disease

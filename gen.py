@@ -21,8 +21,10 @@ def autocalcReplace(string, autocalcData):
 
 def sreplace(string, name, prefix="", autocalcData=""):
 	if prefix=="": prefix = sanitize(name)
+	prefix = sanitize_for_js(prefix)
+	san_name = sanitize_for_js(sanitize(name))
 	string = string.replace("{id-prefix}", prefix)
-	string = string.replace("{sanName}", sanitize(name))
+	string = string.replace("{sanName}", san_name)
 	string = string.replace("{name}", name)
 	string = autocalcReplace(string, autocalcData)
 	return string
@@ -103,7 +105,7 @@ with open("spec.txt") as fin:
 		if code in ['A', 'T', 'D']:
 			fjs.write("{0}:String($('#{0}').val()),\n".format(san))
 		if code in ['M',]:
-			fjs.write("{0}:$('[name={0}],:checked').val(),\n".format(san))
+			fjs.write("{0}:$('[name={0}]:checked').val(),\n".format(san))
 		if code in ['C']:
 			fjs.write("{0}:checkboxPrint('#{0}'),\n".format(san))
 
