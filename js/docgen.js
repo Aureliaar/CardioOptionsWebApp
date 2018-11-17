@@ -28,7 +28,7 @@ function generate() {
             cigarettes_per_day:String($('#cigarettes_per_day').val()),
             drug_usage_history:checkboxPrint('#drug_usage_history'),
             alcohol_usage_history:checkboxPrint('#alcohol_usage_history'),
-            dyslipidemia:String($('#dyslipidemia').val()),
+            dyslipidemia:$('[name=dyslipidemia]:checked').val(),
             diabetes_mellitus:String($('#diabetes_mellitus').val()),
             diabetes_type_i:checkboxPrint('#diabetes_type_i'),
             diabetes_type_ii:checkboxPrint('#diabetes_type_ii'),

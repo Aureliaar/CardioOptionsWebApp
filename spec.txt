@@ -16,7 +16,7 @@ C Previous Smoke
 T Cigarettes per day 
 C Drug Usage History | HASBLED=1
 C Alcohol Usage History | HASBLED=1
-T Dyslipidemia
+M Dyslipidemia, I, IIa, IIb, III, IV, V
 M Diabetes mellitus, None, Type I, Type II | CHA2DS2=1
 C Arterial hypertension
 C Peripheral vascular disease | CHA2DS2=1
