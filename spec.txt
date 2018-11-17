@@ -2,8 +2,8 @@ H Patient Characteristics
 T Last Name 
 T First Name 
 D Date of Birth | Euroscore=0, CHA2DS2VASC=0
-A Age | Euroscore=1
-M Gender, Male, Female | Euroscore=1, CHA2DS2=1
+A Age | HASBLED=0, Euroscore=0, CHA2DS2=0
+M Gender, Male, Female | Euroscore=0, CHA2DS2=0
 T Weight (kg)
 T Height (cm)
 A BMI
@@ -14,12 +14,10 @@ H Risk Factors
 C Current Smoke
 C Previous Smoke
 T Cigarettes per day 
-C Drug Usage History
-C Alcohol Usage History
+C Drug Usage History | HASBLED=1
+C Alcohol Usage History | HASBLED=1
 T Dyslipidemia
-T Diabetes mellitus | CHA2DS2=1
-C Diabetes Type I
-C Diabetes Type II
+M Diabetes mellitus, None, Type I, Type II | CHA2DS2=1
 C Arterial hypertension
 C Peripheral vascular disease | CHA2DS2=1
 C Familiarity CVD
@@ -38,12 +36,12 @@ C Hepatitis B
 C Hepatitis C
 T Other infectious diseases
 H Blood Analysis
-T Labile INRs
+T Labile INRs | HASBLED=1
 C DM insulin dependent
 H Renal Function
 T creatinine, mg/dL
 C Creatinine>1.8, mg/dL
-T Serum creatinine, mg/dL | Euroscore=2
+T Serum creatinine, mg/dL | Euroscore=0
 T Creatinine clearance, ml/min
 T Peak creatinine, mg/dL
 T Discharge creatinine, mg/dL
@@ -52,24 +50,24 @@ C Dialysis
 T eGFR Cockcroft Gault
 T Baseline creatinine
 C Chronic kidney disease
-C Abnormal renal function
+C Abnormal renal function | HASBLED=1
 H Neurological factors
 C Neurological dysfunction disease | Euroscore=2
 C Syncope
 D Date of event
 C Cerebral vascular event
-C TIA | CHA2DS2=2
+C TIA | CHA2DS2=0
 D Date of event
-C Stroke
+C Stroke | HASBLED=0, CHA2DS2=0
 D date of event
 C Poor mobility
 H Procedural/surgical related factors
 T Type of surgery
 D Date of surgery
-M Urgency, Elective, Urgent, Emergency, Salvage | Euroscore=2
-C Bleeding 
+M Urgency, Elective, Urgent, Emergency, Salvage | Euroscore=0
+C Bleeding | HASBLED=1
 C Critical Preoperative State | Euroscore=3
-M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures | Euroscore=2
+M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures | Euroscore=0
 H Cardiac Related Factors
 C Previous MI
 C Recent MI | Euroscore=2
@@ -79,15 +77,15 @@ C NSTEMI
 C Post infarct septal rupture | Euroscore=4
 D Date STEMI
 D Date NSTEMI
-C Heart Failure | CHA2DS2=1
+C Heart Failure | CHA2DS2=0
 M NYHA Class, I, II, III, IV
 C Stable angina 
 M CCS Class, 0, I, II, III, IV
 C Unstable Angina | Euroscore=2
 C Atrial Fibrillation 
 C Coronary Artery Disease 
-T Ef (%), %
-C Lv Dysfunction | Euroscore=1
+T Ef, % | Euroscore=0
+C Lv Dysfunction | CHA2DS2=0
 M Pre-ar Grade, 0, Slight, Moderate, Severe
 T Eroa, Cm2
 M Pre-mr Grade, 0, Slight, Moderate, Severe
@@ -118,11 +116,11 @@ C Previous chemotherapy
 C Radiotherapy
 C Active Radiotherapy
 C Previous Radiotherapy
-C Abnormal liver function
-C Pulmonary hypertension | Euroscore=2
+C Abnormal liver function | HASBLED=1
+C Pulmonary hypertension | Euroscore=2, CHA2DS2=1
 M Pulmonary hypertension grade, Normal, Moderate, Severe
 T PAPs, mmHg
-C Chronic pulmonary disease
+C Chronic pulmonary disease | Euroscore=1
 H Score
 A Euroscore
 A Log-Euroscore

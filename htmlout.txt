@@ -1,5 +1,5 @@
 <h1>Patient Characteristics</h1>
-	
+
 <div class="group">
 		<input class="textl" type="text" id="last_name" required="required"/>
 		<label class="textl" for="last_name">Last Name</label>
@@ -16,7 +16,7 @@
 		<div class="bar"></div>
 	</div>
     <div class="group">
-		<input class="textl euroscore" type="text" id="age" value="Autocalc"  data-euroscoreWeight="1"  disabled>
+		<input class="textl hasbled euroscore cha2ds2" type="text" id="age" value="Autocalc"  data-hasbledWeight="0"  data-euroscoreWeight="0"  data-cha2ds2Weight="0"  disabled>
 		<label class="textl" for="age">Age</label>
 		<div class="bar"></div>
 	</div>
@@ -87,7 +87,7 @@
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Drug Usage History
-		<input  id=drug_usage_history class="label__checkbox " type="checkbox"  />
+		<input  id=drug_usage_history class="label__checkbox hasbled" type="checkbox"  data-hasbledWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -95,7 +95,7 @@
 	</span>
 	</label>
 <label class="label checkmark_label"> Alcohol Usage History
-		<input  id=alcohol_usage_history class="label__checkbox " type="checkbox"  />
+		<input  id=alcohol_usage_history class="label__checkbox hasbled" type="checkbox"  data-hasbledWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -107,27 +107,14 @@
 		<label class="textl" for="dyslipidemia">Dyslipidemia</label>
 		<div class="bar"></div>
 	</div>
-<div class="group">
-		<input class="textl" type="text" id="diabetes_mellitus" required="required"/>
-		<label class="textl" for="diabetes_mellitus">Diabetes mellitus</label>
-		<div class="bar"></div>
-	</div>
-<label class="label checkmark_label"> Diabetes Type I
-		<input  id=diabetes_type_i class="label__checkbox " type="checkbox"  />
-		<span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-	</label>
-<label class="label checkmark_label"> Diabetes Type II
-		<input  id=diabetes_type_ii class="label__checkbox " type="checkbox"  />
-		<span class="label__text">
-	  <span class="label__check">
-		<i class="fa fa-check icon"></i>
-	  </span>
-	</span>
-	</label>
+<form class="radio-form cf">
+<section id = "section-Diabetes mellitus" class="plan cf">
+	<h2>Diabetes mellitus</h2>
+		<input class="MyRadioInput cha2ds2" type="radio" name="diabetes_mellitus" id="diabetes_mellitusnone" value="none"><label class="three col" for="diabetes_mellitusnone">None</label>
+		<input class="MyRadioInput cha2ds2" type="radio" name="diabetes_mellitus" id="diabetes_mellitustype_i" value="type_i"><label class="three col" for="diabetes_mellitustype_i">Type I</label>
+		<input class="MyRadioInput cha2ds2" type="radio" name="diabetes_mellitus" id="diabetes_mellitustype_ii" value="type_ii"><label class="three col" for="diabetes_mellitustype_ii">Type II</label>
+
+</section></form>
 <label class="label checkmark_label"> Arterial hypertension
 		<input  id=arterial_hypertension class="label__checkbox " type="checkbox"  />
 		<span class="label__text">
@@ -316,7 +303,7 @@
 	</span>
 	</label>
 <label class="label checkmark_label"> Abnormal renal function
-		<input  id=abnormal_renal_function class="label__checkbox " type="checkbox"  />
+		<input  id=abnormal_renal_function class="label__checkbox hasbled" type="checkbox"  data-hasbledWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -355,7 +342,7 @@
 	</span>
 	</label>
 <label class="label checkmark_label"> TIA
-		<input  id=tia class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="2"  />
+		<input  id=tia class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="0"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -368,7 +355,7 @@
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Stroke
-		<input  id=stroke class="label__checkbox " type="checkbox"  />
+		<input  id=stroke class="label__checkbox hasbled cha2ds2" type="checkbox"  data-hasbledWeight="0"  data-cha2ds2Weight="0"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -410,7 +397,7 @@
 
 </section></form>
 <label class="label checkmark_label"> Bleeding
-		<input  id=bleeding class="label__checkbox " type="checkbox"  />
+		<input  id=bleeding class="label__checkbox hasbled" type="checkbox"  data-hasbledWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -492,7 +479,7 @@
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Heart Failure
-		<input  id=heart_failure class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="1"  />
+		<input  id=heart_failure class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="0"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -552,11 +539,11 @@
 	</label>
 <div class="group">
 		<input class="textl" type="text" id="ef" required="required"/>
-		<label class="textl" for="ef">Ef (%)</label>
+		<label class="textl" for="ef">Ef</label>
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Lv Dysfunction
-		<input  id=lv_dysfunction class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="1"  />
+		<input  id=lv_dysfunction class="label__checkbox cha2ds2" type="checkbox"  data-cha2ds2Weight="0"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -772,7 +759,7 @@
 	</span>
 	</label>
 <label class="label checkmark_label"> Abnormal liver function
-		<input  id=abnormal_liver_function class="label__checkbox " type="checkbox"  />
+		<input  id=abnormal_liver_function class="label__checkbox hasbled" type="checkbox"  data-hasbledWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -780,7 +767,7 @@
 	</span>
 	</label>
 <label class="label checkmark_label"> Pulmonary hypertension
-		<input  id=pulmonary_hypertension class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
+		<input  id=pulmonary_hypertension class="label__checkbox euroscore cha2ds2" type="checkbox"  data-euroscoreWeight="2"  data-cha2ds2Weight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>
@@ -801,7 +788,7 @@
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Chronic pulmonary disease
-		<input  id=chronic_pulmonary_disease class="label__checkbox " type="checkbox"  />
+		<input  id=chronic_pulmonary_disease class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="1"  />
 		<span class="label__text">
 	  <span class="label__check">
 		<i class="fa fa-check icon"></i>

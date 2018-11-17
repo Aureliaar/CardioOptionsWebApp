@@ -1,0 +1,21 @@
+age:
+    HASBLED=1 (if age>65), 
+    Euroscore=1 (if age=60,61,62,63,65), 
+    CHA2DS2=2 (if age>75), CHA2DS2=1 (if 65<age<74)
+gender:
+    Euroscore=1 (if female), 
+    CHA2DS2=1 (if female)
+serum_creatinine:
+    Euroscore=2 (if serum_creatinine>2.27)
+stroke:
+    HASBLED=1, 
+    CHA2DS2=2 (if no TIA, instead 0)
+urgency:
+    Euroscore=2 (if emergency)
+Weight of the intervention
+    Euroscore=2 (if 2_procedures or 3_procedures)
+ef:
+    Euroscore=1 (if 30<EF<50) 
+    Euroscore=3 (if EF<30)
+C Lv Dysfunction 
+    CHA2DS2=1 (if no Heart_failure, instead 0)
