@@ -22,7 +22,7 @@ $('.hasbled').on('input', function(){
       if ($(this).is(":checked")){score+=weight;}
    });
    if (parseInt($('#age').val()) > 65) {score++};
-   $('#has-bled-_score').val(score);
+   $('#hasbled_score').val(score);
 });
 
 $('.euroscore').on('input', function(){
