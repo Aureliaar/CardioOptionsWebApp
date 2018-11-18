@@ -42,11 +42,11 @@ $('.euroscore').on('input', function(){
 }
    if ($('#urgencyemergency').prop("checked")){score+=2;}
 
-   if ($('#weight_of_the_intervention2_procedures').is("checked")){score+=2;}
-   if ($('#weight_of_the_intervention3_procedures').is("checked")){score+=2;}
+   if ($('#weight_of_the_intervention2_procedures').is(":checked")){score+=2;}
+   if ($('#weight_of_the_intervention3_procedures').is(":checked")){score+=2;}
 
-   if ($('#urgencyemergency').is("checked")){score+=2;}
-   if ($('#sexfemale').is("checked")){score+=1;}
+   if ($('#urgencyemergency').is(":checked")){score+=2;}
+   if ($('#genderfemale').is(":checked")){score+=1;}
    var screatinine = parseFloat($('#serum_creatinine').val());
    if (screatinine > 2.27 ){score+=2;}
    $('#euroscore').val(score);
@@ -57,22 +57,22 @@ $('.cha2ds2').on('input', function(){
         var weight = parseFloat($(this).attr('Data-cha2ds2Weight'));
         if ($(this).is(":checked")){score+=weight;}
     });
-    if ($('#sexfemale').is("checked")){score+=1;}
+    if ($('#genderfemale').is(":checked")){score+=1;}
+
     var age = parseInt($('#age').val());
     if (age>74){score++;}
     if (age>64){score++;}
     
-    var stroke = $('#stroke').is("checked");
-    var tia = $('#tia').is("checked");
+    var stroke = $('#stroke').is(":checked");
+    var tia = $('#tia').is(":checked");
     if (stroke || tia){score+=2;}
 
-    var lv_dysfunction = $('#lv_dysfunction').is("checked");
-    var heart_failure = $('#heart_failure').is("checked");
+    var lv_dysfunction = $('#lv_dysfunction').is(":checked");
+    var heart_failure = $('#heart_failure').is(":checked");
     if (lv_dysfunction || heart_failure){score+=1;}
     
-    if ($('#diabetes_mellitustype_i').is("checked")){score+=1;}
-    if ($('#diabetes_mellitustype_ii').is("checked")){score+=1;}
-
+    if ($('#diabetes_mellitustype_i').is(":checked")){score+=1;}
+    if ($('#diabetes_mellitustype_ii').is(":checked")){score+=1;}
     $('#cha2ds2vasc_score').val(score);
 });
 $('#date_mi').on('input', function(){
