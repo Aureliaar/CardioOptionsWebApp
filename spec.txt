@@ -1,3 +1,4 @@
+D Date of Compilation
 H Patient Characteristics
 T Last Name 
 T First Name 
@@ -54,12 +55,12 @@ C Abnormal renal function | HASBLED=1
 H Neurological factors
 C Neurological dysfunction disease | Euroscore=2
 C Syncope
-D Date of event
+D Syncope Date of event
 C Cerebral vascular event
 C TIA | CHA2DS2=0
-D Date of event
+D TIA Date of event
 C Stroke | HASBLED=0, CHA2DS2=0
-D date of event
+D Stroke Date of event
 C Poor mobility
 H Procedural/surgical related factors
 T Type of surgery

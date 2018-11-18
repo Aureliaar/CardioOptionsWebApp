@@ -37,6 +37,11 @@
 <![endif]-->
 
     <div class="container">
+        <div class="group">
+            <input class="textl" type="date" id="date_of_compilation" required="required" />
+            <label class="textl" for="date_of_compilation">Date of Compilation</label>
+            <div class="bar"></div>
+        </div>
         <h1>Patient Characteristics</h1>
 
         <div class="group">
@@ -394,8 +399,8 @@
             </span>
         </label>
         <div class="group">
-            <input class="textl" type="date" id="date_of_event" required="required" />
-            <label class="textl" for="date_of_event">Date of event</label>
+            <input class="textl" type="date" id="syncope_date_of_event" required="required" />
+            <label class="textl" for="syncope_date_of_event">Syncope Date of event</label>
             <div class="bar"></div>
         </div>
         <label class="label checkmark_label"> Cerebral vascular event
@@ -415,8 +420,8 @@
             </span>
         </label>
         <div class="group">
-            <input class="textl" type="date" id="date_of_event" required="required" />
-            <label class="textl" for="date_of_event">Date of event</label>
+            <input class="textl" type="date" id="tia_date_of_event" required="required" />
+            <label class="textl" for="tia_date_of_event">TIA Date of event</label>
             <div class="bar"></div>
         </div>
         <label class="label checkmark_label"> Stroke
@@ -429,8 +434,8 @@
             </span>
         </label>
         <div class="group">
-            <input class="textl" type="date" id="date_of_event" required="required" />
-            <label class="textl" for="date_of_event">date of event</label>
+            <input class="textl" type="date" id="stroke_date_of_event" required="required" />
+            <label class="textl" for="stroke_date_of_event">Stroke Date of event</label>
             <div class="bar"></div>
         </div>
         <label class="label checkmark_label"> Poor mobility
@@ -963,10 +968,9 @@
             <label class="textl" for="profession">Profession</label>
             <div class="bar"></div>
         </div>
-
     </div>
 
-    <button onclick="generate()">Generate document</button>
+    <button class="genbutton" onclick="generate()">Generate document</button>
 
     <!--
     Mandatory in IE 6, 7, 8 and 9.

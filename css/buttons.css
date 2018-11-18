@@ -130,3 +130,20 @@ h2.bold{
     cursor: pointer;
     transradio-form: rotateX(360deg);
 }
+
+.genbutton{
+    width: 100%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    padding: 64px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+}
+.genbutton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}

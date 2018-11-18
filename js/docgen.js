@@ -12,6 +12,7 @@ function generate() {
         var zip = new JSZip(content);
         var doc=new window.docxtemplater().loadZip(zip);
         doc.setData({
+            date_of_compilation:String($('#date_of_compilation').val()),
             last_name:String($('#last_name').val()),
             first_name:String($('#first_name').val()),
             date_of_birth:String($('#date_of_birth').val()),
@@ -29,9 +30,7 @@ function generate() {
             drug_usage_history:checkboxPrint('#drug_usage_history'),
             alcohol_usage_history:checkboxPrint('#alcohol_usage_history'),
             dyslipidemia:$('[name=dyslipidemia]:checked').val(),
-            diabetes_mellitus:String($('#diabetes_mellitus').val()),
-            diabetes_type_i:checkboxPrint('#diabetes_type_i'),
-            diabetes_type_ii:checkboxPrint('#diabetes_type_ii'),
+            diabetes_mellitus:$('[name=diabetes_mellitus]:checked').val(),
             arterial_hypertension:checkboxPrint('#arterial_hypertension'),
             peripheral_vascular_disease:checkboxPrint('#peripheral_vascular_disease'),
             familiarity_cvd:checkboxPrint('#familiarity_cvd'),
@@ -63,12 +62,12 @@ function generate() {
             abnormal_renal_function:checkboxPrint('#abnormal_renal_function'),
             neurological_dysfunction_disease:checkboxPrint('#neurological_dysfunction_disease'),
             syncope:checkboxPrint('#syncope'),
-            date_of_event:String($('#date_of_event').val()),
+            syncope_date_of_event:String($('#syncope_date_of_event').val()),
             cerebral_vascular_event:checkboxPrint('#cerebral_vascular_event'),
             tia:checkboxPrint('#tia'),
-            date_of_event:String($('#date_of_event').val()),
+            tia_date_of_event:String($('#tia_date_of_event').val()),
             stroke:checkboxPrint('#stroke'),
-            date_of_event:String($('#date_of_event').val()),
+            stroke_date_of_event:String($('#stroke_date_of_event').val()),
             poor_mobility:checkboxPrint('#poor_mobility'),
             type_of_surgery:String($('#type_of_surgery').val()),
             date_of_surgery:String($('#date_of_surgery').val()),
@@ -133,7 +132,7 @@ function generate() {
             family_or_social_support:checkboxPrint('#family_or_social_support'),
             need_of_assistance:checkboxPrint('#need_of_assistance'),
             religion:String($('#religion').val()),
-            profession:String($('#profession').val()),            
+            profession:String($('#profession').val()),
         });
         try {
             // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
