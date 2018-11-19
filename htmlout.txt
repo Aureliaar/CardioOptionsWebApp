@@ -279,6 +279,11 @@
 		<label class="textl" for="discharge_creatinine">Discharge creatinine</label>
 		<div class="bar"></div>
 	</div>
+<div class="group">
+		<input class="textl" type="text" id="baseline_creatinine" required="required"/>
+		<label class="textl" for="baseline_creatinine">Baseline creatinine</label>
+		<div class="bar"></div>
+	</div>
 <form class="radio-form cf">
 <section id = "section-Renal Impairment" class="plan cf">
 	<h2>Renal Impairment</h2>
@@ -298,11 +303,6 @@
 <div class="group">
 		<input class="textl" type="text" id="egfr_cockcroft_gault" required="required"/>
 		<label class="textl" for="egfr_cockcroft_gault">eGFR Cockcroft Gault</label>
-		<div class="bar"></div>
-	</div>
-<div class="group">
-		<input class="textl" type="text" id="baseline_creatinine" required="required"/>
-		<label class="textl" for="baseline_creatinine">Baseline creatinine</label>
 		<div class="bar"></div>
 	</div>
 <label class="label checkmark_label"> Chronic kidney disease
@@ -562,8 +562,8 @@
 	</span>
 	</label>
 <form class="radio-form cf">
-<section id = "section-Pre-ar Grade" class="plan cf">
-	<h2>Pre-ar Grade</h2>
+<section id = "section-PreAR Grade" class="plan cf">
+	<h2>PreAR Grade</h2>
 		<input class="MyRadioInput " type="radio" name="prear_grade" id="prear_grade0" value="0"><label class="four col" for="prear_grade0">0</label>
 		<input class="MyRadioInput " type="radio" name="prear_grade" id="prear_gradeslight" value="slight"><label class="four col" for="prear_gradeslight">Slight</label>
 		<input class="MyRadioInput " type="radio" name="prear_grade" id="prear_grademoderate" value="moderate"><label class="four col" for="prear_grademoderate">Moderate</label>
@@ -576,8 +576,8 @@
 		<div class="bar"></div>
 	</div>
 <form class="radio-form cf">
-<section id = "section-Pre-mr Grade" class="plan cf">
-	<h2>Pre-mr Grade</h2>
+<section id = "section-PreMR Grade" class="plan cf">
+	<h2>PreMR Grade</h2>
 		<input class="MyRadioInput " type="radio" name="premr_grade" id="premr_grade0" value="0"><label class="four col" for="premr_grade0">0</label>
 		<input class="MyRadioInput " type="radio" name="premr_grade" id="premr_gradeslight" value="slight"><label class="four col" for="premr_gradeslight">Slight</label>
 		<input class="MyRadioInput " type="radio" name="premr_grade" id="premr_grademoderate" value="moderate"><label class="four col" for="premr_grademoderate">Moderate</label>
@@ -590,8 +590,8 @@
 		<div class="bar"></div>
 	</div>
 <form class="radio-form cf">
-<section id = "section-Pre-as Grade" class="plan cf">
-	<h2>Pre-as Grade</h2>
+<section id = "section-PreAS Grade" class="plan cf">
+	<h2>PreAS Grade</h2>
 		<input class="MyRadioInput " type="radio" name="preas_grade" id="preas_grade0" value="0"><label class="four col" for="preas_grade0">0</label>
 		<input class="MyRadioInput " type="radio" name="preas_grade" id="preas_gradeslight" value="slight"><label class="four col" for="preas_gradeslight">Slight</label>
 		<input class="MyRadioInput " type="radio" name="preas_grade" id="preas_grademoderate" value="moderate"><label class="four col" for="preas_grademoderate">Moderate</label>
@@ -614,8 +614,8 @@
 		<div class="bar"></div>
 	</div>
 <form class="radio-form cf">
-<section id = "section-Pre-ms Grade" class="plan cf">
-	<h2>Pre-ms Grade</h2>
+<section id = "section-PreMS Grade" class="plan cf">
+	<h2>PreMS Grade</h2>
 		<input class="MyRadioInput " type="radio" name="prems_grade" id="prems_grade0" value="0"><label class="four col" for="prems_grade0">0</label>
 		<input class="MyRadioInput " type="radio" name="prems_grade" id="prems_gradeslight" value="slight"><label class="four col" for="prems_gradeslight">Slight</label>
 		<input class="MyRadioInput " type="radio" name="prems_grade" id="prems_grademoderate" value="moderate"><label class="four col" for="prems_grademoderate">Moderate</label>

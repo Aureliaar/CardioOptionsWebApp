@@ -46,10 +46,10 @@ T Serum creatinine, mg/dL | Euroscore=0
 T Creatinine clearance, ml/min
 T Peak creatinine, mg/dL
 T Discharge creatinine, mg/dL
+T Baseline creatinine
 M Renal Impairment, Normal, Moderate, Severe
 C Dialysis
 T eGFR Cockcroft Gault
-T Baseline creatinine
 C Chronic kidney disease
 C Abnormal renal function | HASBLED=1
 H Neurological factors
@@ -87,15 +87,15 @@ C Atrial Fibrillation
 C Coronary Artery Disease 
 T Ef, % | Euroscore=0
 C Lv Dysfunction | CHA2DS2=0
-M Pre-ar Grade, 0, Slight, Moderate, Severe
+M PreAR Grade, 0, Slight, Moderate, Severe
 T Eroa, Cm2
-M Pre-mr Grade, 0, Slight, Moderate, Severe
+M PreMR Grade, 0, Slight, Moderate, Severe
 T Vena Contracta
-M Pre-as Grade, 0, Slight, Moderate, Severe
+M PreAS Grade, 0, Slight, Moderate, Severe
 T Ava, Cm2
 T Mean Gradient, Mmhg
 T Jet Velocity, m/s
-M Pre-ms Grade, 0, Slight, Moderate, Severe
+M PreMS Grade, 0, Slight, Moderate, Severe
 T Valve Area, Cm2
 D Last Follow Up
 H Previous Cardiac Surgery
