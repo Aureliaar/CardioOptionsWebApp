@@ -71,8 +71,8 @@ C Critical Preoperative State | Euroscore=3
 M Weight of The Intervention, Isolated Cabg, Single Non Cabg, 2 Procedures, 3 Procedures | Euroscore=0
 H Cardiac Related Factors
 C Previous MI
-C Recent MI | Euroscore=2
 D Date MI
+C Recent MI | Euroscore=2
 C STEMI
 C NSTEMI
 C Post infarct septal rupture | Euroscore=4
