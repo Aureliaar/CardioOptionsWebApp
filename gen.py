@@ -45,7 +45,7 @@ def M(Name, Options, autocalc):
 	enderstring ="""
 </section></form>"""
 
-	numdict= {2:"two", 3:"three", 4:"four", 5:"five", 6:"six"}
+	numdict= {2:"two", 3:"three", 4:"four", 5:"five", 6:"six", 7:"seven"}
 	num = len(Options)
 	prefix = sanitize(Name)
 	print headerstring.replace("{id-prefix}", Name)

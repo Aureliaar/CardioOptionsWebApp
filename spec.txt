@@ -17,7 +17,7 @@ C Previous Smoke
 T Cigarettes per day 
 C Drug Usage History | HASBLED=1
 C Alcohol Usage History | HASBLED=1
-M Dyslipidemia, I, IIa, IIb, III, IV, V
+M Dyslipidemia, 0, I, IIa, IIb, III, IV, V
 M Diabetes mellitus, None, Type I, Type II | CHA2DS2=1
 C Arterial hypertension
 C Peripheral vascular disease | CHA2DS2=1
@@ -47,7 +47,7 @@ T Creatinine clearance, ml/min
 T Peak creatinine, mg/dL
 T Discharge creatinine, mg/dL
 T Baseline creatinine
-M Renal Impairment, Normal, Moderate, Severe
+M Renal Impairment, None, Normal, Moderate, Severe
 C Dialysis
 T eGFR Cockcroft Gault
 C Chronic kidney disease
@@ -79,7 +79,7 @@ C Post infarct septal rupture | Euroscore=4
 D Date STEMI
 D Date NSTEMI
 C Heart Failure | CHA2DS2=0
-M NYHA Class, I, II, III, IV
+M NYHA Class, 0, I, II, III, IV
 C Stable angina 
 M CCS Class, 0, I, II, III, IV
 C Unstable Angina | Euroscore=2
@@ -119,7 +119,7 @@ C Active Radiotherapy
 C Previous Radiotherapy
 C Abnormal liver function | HASBLED=1
 C Pulmonary hypertension | Euroscore=2, CHA2DS2=1
-M Pulmonary hypertension grade, Normal, Moderate, Severe
+M Pulmonary hypertension grade, No, Normal, Moderate, Severe
 T PAPs, mmHg
 C Chronic pulmonary disease | Euroscore=1
 H Score

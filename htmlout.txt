@@ -110,12 +110,13 @@
 <form class="radio-form cf">
 <section id = "section-Dyslipidemia" class="plan cf">
 	<h2>Dyslipidemia</h2>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiai" value="i"><label class="six col" for="dyslipidemiai">I</label>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiia" value="iia"><label class="six col" for="dyslipidemiaiia">IIa</label>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiib" value="iib"><label class="six col" for="dyslipidemiaiib">IIb</label>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiii" value="iii"><label class="six col" for="dyslipidemiaiii">III</label>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiv" value="iv"><label class="six col" for="dyslipidemiaiv">IV</label>
-		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiav" value="v"><label class="six col" for="dyslipidemiav">V</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemia0" value="0"><label class="seven col" for="dyslipidemia0">0</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiai" value="i"><label class="seven col" for="dyslipidemiai">I</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiia" value="iia"><label class="seven col" for="dyslipidemiaiia">IIa</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiib" value="iib"><label class="seven col" for="dyslipidemiaiib">IIb</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiii" value="iii"><label class="seven col" for="dyslipidemiaiii">III</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiv" value="iv"><label class="seven col" for="dyslipidemiaiv">IV</label>
+		<input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiav" value="v"><label class="seven col" for="dyslipidemiav">V</label>
 
 </section></form>
 <form class="radio-form cf">
@@ -287,9 +288,10 @@
 <form class="radio-form cf">
 <section id = "section-Renal Impairment" class="plan cf">
 	<h2>Renal Impairment</h2>
-		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnormal" value="normal"><label class="three col" for="renal_impairmentnormal">Normal</label>
-		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentmoderate" value="moderate"><label class="three col" for="renal_impairmentmoderate">Moderate</label>
-		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentsevere" value="severe"><label class="three col" for="renal_impairmentsevere">Severe</label>
+		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnone" value="none"><label class="four col" for="renal_impairmentnone">None</label>
+		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnormal" value="normal"><label class="four col" for="renal_impairmentnormal">Normal</label>
+		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentmoderate" value="moderate"><label class="four col" for="renal_impairmentmoderate">Moderate</label>
+		<input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentsevere" value="severe"><label class="four col" for="renal_impairmentsevere">Severe</label>
 
 </section></form>
 <label class="label checkmark_label"> Dialysis
@@ -442,6 +444,11 @@
 	  </span>
 	</span>
 	</label>
+<div class="group">
+		<input class="textl" type="date" id="date_mi" required="required"/>
+		<label class="textl" for="date_mi">Date MI</label>
+		<div class="bar"></div>
+	</div>
 <label class="label checkmark_label"> Recent MI
 		<input  id=recent_mi class="label__checkbox euroscore" type="checkbox"  data-euroscoreWeight="2"  />
 		<span class="label__text">
@@ -450,11 +457,6 @@
 	  </span>
 	</span>
 	</label>
-<div class="group">
-		<input class="textl" type="date" id="date_mi" required="required"/>
-		<label class="textl" for="date_mi">Date MI</label>
-		<div class="bar"></div>
-	</div>
 <label class="label checkmark_label"> STEMI
 		<input  id=stemi class="label__checkbox " type="checkbox"  />
 		<span class="label__text">
@@ -500,10 +502,11 @@
 <form class="radio-form cf">
 <section id = "section-NYHA Class" class="plan cf">
 	<h2>NYHA Class</h2>
-		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classi" value="i"><label class="four col" for="nyha_classi">I</label>
-		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classii" value="ii"><label class="four col" for="nyha_classii">II</label>
-		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiii" value="iii"><label class="four col" for="nyha_classiii">III</label>
-		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiv" value="iv"><label class="four col" for="nyha_classiv">IV</label>
+		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_class0" value="0"><label class="five col" for="nyha_class0">0</label>
+		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classi" value="i"><label class="five col" for="nyha_classi">I</label>
+		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classii" value="ii"><label class="five col" for="nyha_classii">II</label>
+		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiii" value="iii"><label class="five col" for="nyha_classiii">III</label>
+		<input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classiv" value="iv"><label class="five col" for="nyha_classiv">IV</label>
 
 </section></form>
 <label class="label checkmark_label"> Stable angina
@@ -788,9 +791,10 @@
 <form class="radio-form cf">
 <section id = "section-Pulmonary hypertension grade" class="plan cf">
 	<h2>Pulmonary hypertension grade</h2>
-		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradenormal" value="normal"><label class="three col" for="pulmonary_hypertension_gradenormal">Normal</label>
-		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_grademoderate" value="moderate"><label class="three col" for="pulmonary_hypertension_grademoderate">Moderate</label>
-		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradesevere" value="severe"><label class="three col" for="pulmonary_hypertension_gradesevere">Severe</label>
+		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradeno" value="no"><label class="four col" for="pulmonary_hypertension_gradeno">No</label>
+		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradenormal" value="normal"><label class="four col" for="pulmonary_hypertension_gradenormal">Normal</label>
+		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_grademoderate" value="moderate"><label class="four col" for="pulmonary_hypertension_grademoderate">Moderate</label>
+		<input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradesevere" value="severe"><label class="four col" for="pulmonary_hypertension_gradesevere">Severe</label>
 
 </section></form>
 <div class="group">
