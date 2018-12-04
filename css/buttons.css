@@ -10,29 +10,31 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 200;
 }
 h2{
-    text-align: center;
+    text-align: left;
     margin: 20px auto;
     margin-bottom: 0;
     margin-top: 1em;
-    border-top: 2px solid #2fcc71;
-    border-bottom: 2px solid #2fcc71;
-
-    max-width: 40%;
-
+    background-color: #2fcc71;
+    display: inline-block;
+    font-size: 20px;
+    padding: 2px 10px;
+    color: #fff;
 }
 
 h1{
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 2em;
-    border-bottom: 2px solid #2fcc71;
-    max-width: 40%;
-    margin: 20px auto;
+    background-color: #2fcc71;
+    max-width: 100%;
+    color: #fff;
+    font-size: 27px;
+    text-align: left;
+    padding: 2px 10px;
+    display: block;
 }
 
 /* CONTAINERS */
 
-.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.container {max-width: 850px; width: 100%; margin: 40px auto;}
 .two { width: 49%; max-width: 49%;}
 .three { width: 32.26%; max-width: 32.26%;}
 .four { width: 23%; max-width: 24%;}
@@ -81,18 +83,22 @@ h2.bold{
     position: relative;
     color: #fff;
     background-color: #aaa;
-    font-size: 26px;
+    font-size: 18px;
     text-align: center;
-    height: 80px;
-    line-height: 80px;
+    height: 50px;
+    line-height: 50px;
     display: block;
     cursor: pointer;
     border: 3px solid transparent;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    min-width: 150px;
 }
 
+.radio-form label.small {
+    min-width: 80px;
+}
 .radio-form .plan input:checked + label, .radio-form .payment-plan input:checked + label, .radio-form .payment-type input:checked + label{
     border: 3px solid #333;
     background-color: #2fcc71;
@@ -132,16 +138,20 @@ h2.bold{
 }
 
 .genbutton{
-    width: 100%;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    padding: 64px 64px;
+    /*border-radius: 8px;*/
+    background-color: #2fcc71;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 48px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 auto;
+    outline: 0;
+    border: 0;
+    text-transform: uppercase;
 }
 .genbutton:hover {
     background-color: #4CAF50; /* Green */

@@ -31,7 +31,6 @@ label.textl {
     position: absolute;
     top: $width/15;
     color: rgba(black, .5);
-    font: 400 $width/15 Roboto;
     cursor: text;
     transition: .25s ease;
 }
@@ -39,20 +38,18 @@ label.textl {
 input.textl {
     display: block;
     width: 100%;
-    padding-top: $width/15;
     border: none;
     border-radius: 0; // For iOS
     // border-bottom: solid $width/150 rgba(white, .5);
     color: black;
     background: $main-color;
-    font-size: $width/15;
+    font-size: 22px;
     transition: .3s ease;
 
     &:valid {
         // border-bottom-color: rgba(white, .5);
         ~ label {
             top: 0;
-            font: 700 $width/25 Roboto;
             color: rgba(black, .6);
         }
     }
@@ -61,7 +58,6 @@ input.textl {
         color: rgba(black, .6);;
         ~ label {
             top: 0;
-            font: 700 $width/25 Roboto;
             color: rgba(black, .5);
         }
         ~ bar {
@@ -72,7 +68,6 @@ input.textl {
         color: rgba(black, .6);;
         ~ label {
             top: 0;
-            font: 700 $width/25 Roboto;
             color: rgba(black, .5);
         }
     }
@@ -81,7 +76,6 @@ input.textl {
         // border-bottom-color: $secondary-color;
         ~ label {
             top: 0;
-            font: 700 $width/25 Roboto;
             color: $secondary-color;
         }
 
@@ -123,3 +117,4 @@ input.textl {
 }
 
 ::selection {background: rgba($secondary-color, .3);}
+

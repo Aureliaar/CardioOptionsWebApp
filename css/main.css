@@ -289,3 +289,23 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+.group.pull-left-custom {
+    float: left;
+    width: 45%;
+}
+
+.group.pull-right-custom {
+    float: right;
+    width: 45%;
+}
+
+.group.pull-left-custom.third {
+    float: left;
+    width: 33%;
+}
+
+.group.pull-right-custom.third {
+    float: right;
+    width: 33.33%;
+}

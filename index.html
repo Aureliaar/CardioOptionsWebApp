@@ -36,51 +36,53 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-    <div class="container">
-        <div class="group">
+    <div class="container clearfix">
+        <div class="group date-of-compilation">
             <input class="textl" type="date" id="date_of_compilation" required="required" />
             <label class="textl" for="date_of_compilation">Date of Compilation</label>
             <div class="bar"></div>
         </div>
         <h1>Patient Characteristics</h1>
 
-        <div class="group">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="last_name" required="required" />
             <label class="textl" for="last_name">Last Name</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="text" id="first_name" required="required" />
             <label class="textl" for="first_name">First Name</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-left-custom">
             <input class="textl" type="date" id="date_of_birth" required="required" />
             <label class="textl" for="date_of_birth">Date of Birth</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl hasbled euroscore cha2ds2" type="text" id="age" value="Autocalc" data-hasbledWeight="0"
                 data-euroscoreWeight="0" data-cha2ds2Weight="0" disabled>
             <label class="textl" for="age">Age</label>
             <div class="bar"></div>
         </div>
-        <form class="radio-form cf">
+        <form class="radio-form cf group-container">
             <section id="section-Gender" class="plan cf">
                 <h2>Gender</h2>
+                <br>
                 <input class="MyRadioInput euroscore cha2ds2" type="radio" name="gender" id="gendermale" value="male"><label
-                    class="two col" for="gendermale">Male</label>
+                    class="col" for="gendermale">Male</label>
                 <input class="MyRadioInput euroscore cha2ds2" type="radio" name="gender" id="genderfemale" value="female"><label
-                    class="two col" for="genderfemale">Female</label>
+                    class="col" for="genderfemale">Female</label>
 
             </section>
         </form>
-        <div class="group">
+        <div class="group-container clearfix">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="weight" required="required" />
             <label class="textl" for="weight">Weight (kg)</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="text" id="height" required="required" />
             <label class="textl" for="height">Height (cm)</label>
             <div class="bar"></div>
@@ -90,19 +92,18 @@
             <label class="textl" for="bmi">BMI</label>
             <div class="bar"></div>
         </div>
-        <label class="label checkmark_label"> Death
-            <input id=death class="label__checkbox " type="checkbox" />
-            <span class="label__text">
-                <span class="label__check">
-                    <i class="fa fa-check icon"></i>
+        
+        <div class="group pull-left-custom third">
+            <label class="label checkmark_label"> Death
+                <input id=death class="label__checkbox " type="checkbox" />
+                <span class="label__text">
+                    <span class="label__check">
+                        <i class="fa fa-check icon"></i>
+                    </span>
                 </span>
-            </span>
-        </label>
-        <div class="group">
-            <input class="textl" type="date" id="date_of_death" required="required" />
-            <label class="textl" for="date_of_death">Date of death</label>
-            <div class="bar"></div>
+            </label>
         </div>
+        <div class="group pull-left-custom third">
         <label class="label checkmark_label"> Cardiovascular death
             <input id=cardiovascular_death class="label__checkbox " type="checkbox" />
             <span class="label__text">
@@ -111,16 +112,17 @@
                 </span>
             </span>
         </label>
-        <h1>Risk Factors</h1>
-
-        <label class="label checkmark_label"> Current Smoke
-            <input id=current_smoke class="label__checkbox " type="checkbox" />
-            <span class="label__text">
-                <span class="label__check">
-                    <i class="fa fa-check icon"></i>
-                </span>
-            </span>
-        </label>
+        </div>
+        <div class="group pull-left-custom third">
+            <input class="textl" type="date" id="date_of_death" required="required" />
+            <label class="textl" for="date_of_death">Date of death</label>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <br>
+    <h1>Risk Factors</h1>
+    <div class="group-container clearfix">
+    <div class="group pull-left-custom third">
         <label class="label checkmark_label"> Previous Smoke
             <input id=previous_smoke class="label__checkbox " type="checkbox" />
             <span class="label__text">
@@ -129,11 +131,23 @@
                 </span>
             </span>
         </label>
-        <div class="group">
-            <input class="textl" type="text" id="cigarettes_per_day" required="required" />
-            <label class="textl" for="cigarettes_per_day">Cigarettes per day</label>
-            <div class="bar"></div>
-        </div>
+    </div>
+    <div class="group pull-left-custom third">
+        <label class="label checkmark_label"> Current Smoke
+            <input id=current_smoke class="label__checkbox " type="checkbox" />
+                <span class="label__text">
+                    <span class="label__check">
+                        <i class="fa fa-check icon"></i>
+                    </span>
+                </span>
+        </label>
+    </div>
+    <div class="group pull-left-custom third">
+        <input class="textl" type="text" id="cigarettes_per_day" required="required" />
+        <label class="textl" for="cigarettes_per_day">Cigarettes per day</label>
+        <div class="bar"></div>
+    </div>
+    <div class="group pull-left-custom">
         <label class="label checkmark_label"> Drug Usage History
             <input id=drug_usage_history class="label__checkbox hasbled" type="checkbox" data-hasbledWeight="1" />
             <span class="label__text">
@@ -142,6 +156,8 @@
                 </span>
             </span>
         </label>
+    </div>
+    <div class="group pull-left-custom">
         <label class="label checkmark_label"> Alcohol Usage History
             <input id=alcohol_usage_history class="label__checkbox hasbled" type="checkbox" data-hasbledWeight="1" />
             <span class="label__text">
@@ -150,22 +166,25 @@
                 </span>
             </span>
         </label>
+    </div>
+    </div>
         <form class="radio-form cf">
             <section id="section-Dyslipidemia" class="plan cf">
                 <h2>Dyslipidemia</h2>
-                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemia0" value="0"><label class="seven col"
+                <br>
+                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemia0" value="0"><label class="small seven col"
                     for="dyslipidemia0">0</label>
-                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiai" value="i"><label class="seven col"
+                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiai" value="i"><label class="small seven col"
                     for="dyslipidemiai">I</label>
                 <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiia" value="iia"><label
-                    class="seven col" for="dyslipidemiaiia">IIa</label>
+                    class="small seven col" for="dyslipidemiaiia">IIa</label>
                 <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiib" value="iib"><label
-                    class="seven col" for="dyslipidemiaiib">IIb</label>
+                    class="small seven col" for="dyslipidemiaiib">IIb</label>
                 <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiii" value="iii"><label
-                    class="seven col" for="dyslipidemiaiii">III</label>
+                    class="small seven col" for="dyslipidemiaiii">III</label>
                 <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiaiv" value="iv"><label
-                    class="seven col" for="dyslipidemiaiv">IV</label>
-                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiav" value="v"><label class="seven col"
+                    class="small seven col" for="dyslipidemiaiv">IV</label>
+                <input class="MyRadioInput " type="radio" name="dyslipidemia" id="dyslipidemiav" value="v"><label class="small seven col"
                     for="dyslipidemiav">V</label>
 
             </section>
@@ -173,6 +192,7 @@
         <form class="radio-form cf">
             <section id="section-Diabetes mellitus" class="plan cf">
                 <h2>Diabetes mellitus</h2>
+                <br>
                 <input class="MyRadioInput cha2ds2" type="radio" name="diabetes_mellitus" id="diabetes_mellitusnone"
                     value="none"><label class="three col" for="diabetes_mellitusnone">None</label>
                 <input class="MyRadioInput cha2ds2" type="radio" name="diabetes_mellitus" id="diabetes_mellitustype_i"
@@ -215,36 +235,37 @@
             </span>
         </label>
         <h1>Allergies and intolerances</h1>
-
-        <div class="group">
+        <div class="group-container clearfix">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="mdc" required="required" />
             <label class="textl" for="mdc">MDC</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="text" id="food_allergies_or_intolerances" required="required" />
             <label class="textl" for="food_allergies_or_intolerances">Food allergies or intolerances</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="latex" required="required" />
             <label class="textl" for="latex">Latex</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="text" id="medicament" required="required" />
             <label class="textl" for="medicament">Medicament</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="respiratory_allergies" required="required" />
             <label class="textl" for="respiratory_allergies">Respiratory allergies</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="text" id="other_allergies" required="required" />
             <label class="textl" for="other_allergies">Other allergies</label>
             <div class="bar"></div>
+        </div>
         </div>
         <h1>Infectious diseases</h1>
 
@@ -343,6 +364,7 @@
         <form class="radio-form cf">
             <section id="section-Renal Impairment" class="plan cf">
                 <h2>Renal Impairment</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnone" value="none"><label
                     class="four col" for="renal_impairmentnone">None</label>
                 <input class="MyRadioInput " type="radio" name="renal_impairment" id="renal_impairmentnormal" value="normal"><label
@@ -384,7 +406,7 @@
             </span>
         </label>
         <h1>Neurological factors</h1>
-
+        <div class="group-container clearfix">
         <label class="label checkmark_label"> Neurological dysfunction disease
             <input id=neurological_dysfunction_disease class="label__checkbox euroscore" type="checkbox"
                 data-euroscoreWeight="2" />
@@ -394,6 +416,7 @@
                 </span>
             </span>
         </label>
+        <div class="group pull-left-custom">
         <label class="label checkmark_label"> Syncope
             <input id=syncope class="label__checkbox " type="checkbox" />
             <span class="label__text">
@@ -402,11 +425,14 @@
                 </span>
             </span>
         </label>
-        <div class="group">
+        </div>
+        <div class="group pull-right-custom">
             <input class="textl" type="date" id="syncope_date_of_event" required="required" />
             <label class="textl" for="syncope_date_of_event">Syncope Date of event</label>
             <div class="bar"></div>
         </div>
+        </div>
+        <div class="group-container clearfix">
         <label class="label checkmark_label"> Cerebral vascular event
             <input id=cerebral_vascular_event class="label__checkbox " type="checkbox" />
             <span class="label__text">
@@ -415,6 +441,7 @@
                 </span>
             </span>
         </label>
+        <div class="group pull-left-custom">
         <label class="label checkmark_label"> TIA
             <input id=tia class="label__checkbox cha2ds2" type="checkbox" data-cha2ds2Weight="0" />
             <span class="label__text">
@@ -423,11 +450,13 @@
                 </span>
             </span>
         </label>
-        <div class="group">
+        </div>
+        <div class="group pull-right-custom">
             <input class="textl" type="date" id="tia_date_of_event" required="required" />
             <label class="textl" for="tia_date_of_event">TIA Date of event</label>
             <div class="bar"></div>
         </div>
+        <div class="group pull-left-custom">
         <label class="label checkmark_label"> Stroke
             <input id=stroke class="label__checkbox hasbled cha2ds2" type="checkbox" data-hasbledWeight="0"
                 data-cha2ds2Weight="0" />
@@ -437,11 +466,13 @@
                 </span>
             </span>
         </label>
-        <div class="group">
+        </div>
+        <div class="group pull-right-custom">
             <input class="textl" type="date" id="stroke_date_of_event" required="required" />
             <label class="textl" for="stroke_date_of_event">Stroke Date of event</label>
             <div class="bar"></div>
         </div>
+        <div class="group">
         <label class="label checkmark_label"> Poor mobility
             <input id=poor_mobility class="label__checkbox " type="checkbox" />
             <span class="label__text">
@@ -450,21 +481,25 @@
                 </span>
             </span>
         </label>
+        </div>
+        </div>
         <h1>Procedural/surgical related factors</h1>
-
-        <div class="group">
+        <div class="group-container clearfix">
+        <div class="group pull-left-custom">
             <input class="textl" type="text" id="type_of_surgery" required="required" />
             <label class="textl" for="type_of_surgery">Type of surgery</label>
             <div class="bar"></div>
         </div>
-        <div class="group">
+        <div class="group pull-right-custom">
             <input class="textl" type="date" id="date_of_surgery" required="required" />
             <label class="textl" for="date_of_surgery">Date of surgery</label>
             <div class="bar"></div>
         </div>
+        </div>
         <form class="radio-form cf">
             <section id="section-Urgency" class="plan cf">
                 <h2>Urgency</h2>
+                <br>
                 <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyelective" value="elective"><label
                     class="four col" for="urgencyelective">Elective</label>
                 <input class="MyRadioInput euroscore" type="radio" name="urgency" id="urgencyurgent" value="urgent"><label
@@ -496,6 +531,7 @@
         <form class="radio-form cf">
             <section id="section-Weight of The Intervention" class="plan cf">
                 <h2>Weight of The Intervention</h2>
+                <br>
                 <input class="MyRadioInput euroscore" type="radio" name="weight_of_the_intervention" id="weight_of_the_interventionisolated_cabg"
                     value="isolated_cabg"><label class="four col" for="weight_of_the_interventionisolated_cabg">Isolated
                     Cabg</label>
@@ -580,6 +616,7 @@
         <form class="radio-form cf">
             <section id="section-NYHA Class" class="plan cf">
                 <h2>NYHA Class</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_class0" value="0"><label class="five col"
                     for="nyha_class0">0</label>
                 <input class="MyRadioInput " type="radio" name="nyha_class" id="nyha_classi" value="i"><label class="five col"
@@ -604,6 +641,7 @@
         <form class="radio-form cf">
             <section id="section-CCS Class" class="plan cf">
                 <h2>CCS Class</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_class0" value="0"><label class="five col"
                     for="ccs_class0">0</label>
                 <input class="MyRadioInput " type="radio" name="ccs_class" id="ccs_classi" value="i"><label class="five col"
@@ -657,6 +695,7 @@
         <form class="radio-form cf">
             <section id="section-PreAR Grade" class="plan cf">
                 <h2>PreAR Grade</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="prear_grade" id="prear_grade0" value="0"><label class="four col"
                     for="prear_grade0">0</label>
                 <input class="MyRadioInput " type="radio" name="prear_grade" id="prear_gradeslight" value="slight"><label
@@ -676,6 +715,7 @@
         <form class="radio-form cf">
             <section id="section-PreMR Grade" class="plan cf">
                 <h2>PreMR Grade</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="premr_grade" id="premr_grade0" value="0"><label class="four col"
                     for="premr_grade0">0</label>
                 <input class="MyRadioInput " type="radio" name="premr_grade" id="premr_gradeslight" value="slight"><label
@@ -695,6 +735,7 @@
         <form class="radio-form cf">
             <section id="section-PreAS Grade" class="plan cf">
                 <h2>PreAS Grade</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="preas_grade" id="preas_grade0" value="0"><label class="four col"
                     for="preas_grade0">0</label>
                 <input class="MyRadioInput " type="radio" name="preas_grade" id="preas_gradeslight" value="slight"><label
@@ -724,6 +765,7 @@
         <form class="radio-form cf">
             <section id="section-PreMS Grade" class="plan cf">
                 <h2>PreMS Grade</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="prems_grade" id="prems_grade0" value="0"><label class="four col"
                     for="prems_grade0">0</label>
                 <input class="MyRadioInput " type="radio" name="prems_grade" id="prems_gradeslight" value="slight"><label
@@ -902,6 +944,7 @@
         <form class="radio-form cf">
             <section id="section-Pulmonary hypertension grade" class="plan cf">
                 <h2>Pulmonary hypertension grade</h2>
+                <br>
                 <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradeno"
                     value="no"><label class="four col" for="pulmonary_hypertension_gradeno">No</label>
                 <input class="MyRadioInput " type="radio" name="pulmonary_hypertension_grade" id="pulmonary_hypertension_gradenormal"
@@ -976,9 +1019,10 @@
             <label class="textl" for="profession">Profession</label>
             <div class="bar"></div>
         </div>
+        <button class="genbutton" onclick="generate()">Generate document</button>
+
     </div>
 
-    <button class="genbutton" onclick="generate()">Generate document</button>
 
     <!--
     Mandatory in IE 6, 7, 8 and 9.
